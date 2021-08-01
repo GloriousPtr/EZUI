@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a0f7b88a8f407a941d1d3486aacb53, type: 3}
+  m_Name: EZUIData
+  m_EditorClassIdentifier: 
+  panels:
+  - Menu
+  - Settings
+  - Shop
+  - Stats
+  - Popup
+  - Popup2
+  - Stats2
+  - Shop2
+  - Settings2
+  - Menu2
+  pages:
+  - name: MenuGroup
+    showingPanels:
+    - Menu
+    ignoringPanels: []
+    defaultPage: 1
+  - name: SettingsGroup
+    showingPanels:
+    - Settings
+    ignoringPanels: []
+    defaultPage: 0
+  - name: ShopGroup
+    showingPanels:
+    - Shop
+    ignoringPanels: []
+    defaultPage: 0
+  - name: StatsGroup
+    showingPanels:
+    - Stats
+    ignoringPanels: []
+    defaultPage: 0
+  - name: PopupGroup
+    showingPanels:
+    - Popup
+    ignoringPanels:
+    - Menu
+    - Settings
+    - Shop
+    - Stats
+    - Popup2
+    - Stats2
+    - Shop2
+    - Settings2
+    - Menu2
+    defaultPage: 0
+  - name: Menu2
+    showingPanels:
+    - Menu2
+    ignoringPanels: []
+    defaultPage: 0
+  - name: Settings2
+    showingPanels:
+    - Settings2
+    ignoringPanels: []
+    defaultPage: 0
+  - name: Shop2
+    showingPanels:
+    - Shop2
+    ignoringPanels: []
+    defaultPage: 0
+  - name: Stats2
+    showingPanels:
+    - Stats2
+    ignoringPanels: []
+    defaultPage: 0
+  - name: Popup2
+    showingPanels:
+    - Popup2
+    ignoringPanels:
+    - Menu
+    - Settings
+    - Shop
+    - Stats
+    - Popup
+    - Stats2
+    - Shop2
+    - Settings2
+    - Menu2
+    defaultPage: 0

@@ -1,0 +1,19 @@
+{
+    "name": "EZUI.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:959939bbd741b44439c70dd850200700",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

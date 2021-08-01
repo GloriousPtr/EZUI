@@ -1,0 +1,17 @@
+{
+    "name": "EZUI",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ca790a55b5b8a6140afa5b27f7c2f0e1",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
