@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿using System;
+using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using EZUI;
 
@@ -19,6 +21,9 @@ namespace EZUI_Editor
 		private SerializedProperty showData;
 		private SerializedProperty hideData;
 
+		private string[] allPanelKeys;
+		private int panelIndex;
+
 		protected override void OnEnable()
 		{
 			base.OnEnable();
@@ -36,6 +41,12 @@ namespace EZUI_Editor
 			customStartPosition = serializedObject.FindProperty("customStartPosition");
 			showData = serializedObject.FindProperty("showData");
 			hideData = serializedObject.FindProperty("hideData");
+
+			List<string> allPanels = new List<string>() {"-"};
+			allPanels.AddRange(EZUIManager.Data.panels);
+			allPanelKeys = allPanels.ToArray();
+			
+			panelIndex = Array.FindIndex(allPanelKeys, x => x == key.stringValue);
 		}
 		
 		public override void OnInspectorGUI()
@@ -53,8 +64,13 @@ namespace EZUI_Editor
 			EditorGUILayout.Space(20);
 			
 			EditorGUILayout.BeginHorizontal();
+			
 			EditorGUILayout.LabelField("Key", GUILayout.Width(135));
-			EditorGUILayout.PropertyField(key, GUIContent.none);
+			
+			EditorGUI.BeginChangeCheck();
+			panelIndex = EditorGUILayout.Popup(panelIndex, allPanelKeys);
+			if (EditorGUI.EndChangeCheck())
+				key.stringValue = panelIndex == -1 ? "-" : allPanelKeys[panelIndex];
 			EditorGUILayout.EndHorizontal();
 			
 			EditorGUILayout.Space(20);

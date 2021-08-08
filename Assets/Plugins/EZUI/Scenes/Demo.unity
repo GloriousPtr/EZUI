@@ -894,7 +894,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.65940005
+  m_FillAmount: 0.46080017
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -5579,7 +5579,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     isAnimating: 0
-    expanded: 1
+    expanded: 0
     isAnyAnimationActive: 1
 --- !u!225 &1147705990
 CanvasGroup:
@@ -5939,7 +5939,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.65940005
+  m_FillAmount: 0.46080017
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -6747,8 +6747,8 @@ MonoBehaviour:
   - {fileID: 1701590974}
   minValue: 450
   maxValue: 500
-  currentValue: 482.97
-  currentPercent: 0.65940005
+  currentValue: 473.04
+  currentPercent: 0.46080017
   duration: 1
   ease: 27
   useWholeNumbers: 1
@@ -6833,7 +6833,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' 483 HP'
+  m_text: ' 473 XP'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6944,7 +6944,7 @@ MonoBehaviour:
   textLabel: {fileID: 1549763375}
   useProgress: 0
   prefix: 
-  suffix: HP
+  suffix: XP
 --- !u!1 &1625843353
 GameObject:
   m_ObjectHideFlags: 0
@@ -7295,7 +7295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Percent: 66 %'
+  m_text: 'Percent: 46 %'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
