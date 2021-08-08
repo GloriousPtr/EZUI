@@ -8,14 +8,17 @@ namespace EZUI
 	{
 		public static EZUIManager Instance { get; private set; }
 		
+		[SerializeField] private bool debug;
 		[SerializeField] private List<Transform> UImodules = new List<Transform>();
 		
 		private List<EZUIPanel> panels = new List<EZUIPanel>();
 		private List<EZUIPopup> popups = new List<EZUIPopup>();
+		private Dictionary<string, EZUIPopup> popupsDictionary = new Dictionary<string, EZUIPopup>();
 		private readonly Stack<EZUIPopup> popupStack = new Stack<EZUIPopup>();
 		private readonly Stack<EZUIData.Page> pageStack = new Stack<EZUIData.Page>();
 		
 		public event Action<string> OnShowPage;
+		public event Action<string> OnShowPopup;
 		public event Action ShouldQuit;
 		
 		public string CurrentPage { get; private set; }
@@ -69,45 +72,75 @@ namespace EZUI
 
 		private void Init()
 		{
+			Data.Init();
+			
 			panels.Clear();
 			panels.AddRange(GetComponentsInChildren<EZUIPanel>(true));
 
-			foreach (Transform module in UImodules)
-				panels.AddRange(module.GetComponentsInChildren<EZUIPanel>(true));
-
-			if (Application.isEditor)
-				panels.Sort((a, b) => { return string.Compare(a.name, b.name); });
-			
+			for (int i = 0; i < UImodules.Count; i++)
+				panels.AddRange(UImodules[i].GetComponentsInChildren<EZUIPanel>(true));
 			
 			popups.Clear();
 			popups.AddRange(GetComponentsInChildren<EZUIPopup>(true));
 
-			foreach (Transform module in UImodules)
-				popups.AddRange(module.GetComponentsInChildren<EZUIPopup>(true));
+			for (int i = 0; i < UImodules.Count; i++)
+				popups.AddRange(UImodules[i].GetComponentsInChildren<EZUIPopup>(true));
 
-			if (Application.isEditor)
-				popups.Sort((a, b) => { return string.Compare(a.name, b.name); });
+			for (int i = 0; i < popups.Count; i++)
+			{
+				EZUIPopup popup = popups[i];
+				popupsDictionary.Add(popup.key, popup);
+			}
 		}
 
-		private bool ShowPage(EZUIData.Page page, bool immediate = false, bool addToBackStack = true)
+		public void ShowPage(string key)
 		{
-			if (EZUIPanel.RunningAnimations > 0 || CurrentPage == page.name)
+			ShowPage(key, false);
+		}
+
+		public void ShowPage(string key, bool immediate)
+		{
+			if (debug)
+			{
+				if (!Data.pagesDictionary.ContainsKey(key))
+				{
+					Debug.LogError($"Page not found with key: {key}");
+					return;
+				}
+			}
+			
+			ShowPage(Data.pagesDictionary[key], immediate);
+		}
+		
+		private bool ShowPage(EZUIData.Page page, bool immediate, bool addToBackStack = true)
+		{
+			if (debug)
+			{
+				if (page == null)
+				{
+					Debug.LogError("Page is null!");
+					return false;
+				}
+			}
+			
+			if (EZUIPanel.RunningAnimations > 0 || CurrentPage == page.key)
 				return false;
 			
-			CurrentPage = page.name;
+			CurrentPage = page.key;
 
-			foreach (EZUIPopup popup in popups)
-				popup.SetVisible(false);
-			
-			foreach (EZUIPanel panel in panels)
+			for (int i = 0; i < popups.Count; i++)
+				popups[i].SetVisible(false);
+
+			for (int i = 0; i < panels.Count; i++)
 			{
+				EZUIPanel panel = panels[i];
 				if (page.showingPanels.Contains(panel.key))
 					panel.SetVisible(true, immediate);
 				else if (!page.ignoringPanels.Contains(panel.key))
 					panel.SetVisible(false, immediate);
 			}
-			
-			OnShowPage?.Invoke(page.name);
+
+			OnShowPage?.Invoke(page.key);
 			
 			if (!addToBackStack)
 				return true;
@@ -118,45 +151,74 @@ namespace EZUI
 			
 			pageStack.Push(page);
 			
-			// PrettyPrintStack();
+			if (debug)
+				PrettyPrintStack();
 			
 			return true;
 		}
 
-		public void ShowPage(string pageName)
+		public void ShowPopup(string key)
 		{
-			ShowPage(pageName, false);
+			ShowPopup(key, false);
 		}
-
-		public void ShowPage(string pageName, bool immediate)
+		
+		public void ShowPopup(string key, bool immediate)
 		{
-			EZUIData.Page page = Data.pages.Find(x => x.name == pageName);
-			if (page != null)
-				ShowPage(page, immediate);
-		}
-
-		public void ShowPopup(string popupName)
-		{
-			EZUIPopup popup = popups.Find(x => x.key == popupName);
+			if (debug)
+			{
+				if (!popupsDictionary.ContainsKey(key))
+				{
+					Debug.LogError($"Popup not found with key: {key}");
+					return;
+				}
+			}
 			
+			ShowPopup(popupsDictionary[key], immediate);
+		}
+		
+		public void ShowPopup(EZUIPopup popup, bool immediate)
+		{
 			if (popup == null)
 				return;
 			
 			popupStack.Push(popup);
-			popup.SetVisible(true);
+			popup.SetVisible(true, immediate);
+			OnShowPopup?.Invoke(popup.key);
+			
+			if (debug)
+				PrettyPrintStack();
 		}
 		
-		public void HidePopup(string popupName)
+		public void HidePopup(string key)
 		{
-			EZUIPopup popup = popups.Find(x => x.key == popupName);
-			
+			HidePopup(key, false);
+		}
+		
+		public void HidePopup(string key, bool immediate)
+		{
+			if (debug)
+			{
+				if (!popupsDictionary.ContainsKey(key))
+				{
+					Debug.LogError($"Popup not found with key: {key}");
+					return;
+				}
+			}
+
+			HidePopup(popupsDictionary[key], immediate);
+		}
+		
+		public void HidePopup(EZUIPopup popup, bool immediate)
+		{
 			if (popup == null)
 				return;
 			
 			while (popupStack.Contains(popup))
 				popupStack.Pop();
+			popup.SetVisible(false, immediate);
 			
-			popup.SetVisible(false);
+			if (debug)
+				PrettyPrintStack();
 		}
 		
 		public void HideAll(bool immediate, bool clearBackStack)
@@ -201,10 +263,18 @@ namespace EZUI
 
 		private void PrettyPrintStack()
 		{
-			string s = "Stack:\n";
+			if (!debug)
+				return;
+			
+			string stack = "Popup Stack:\n";
+			foreach (EZUIPopup popup in popupStack)
+				stack += $"\t{popup.key}\n";
+			
+			stack = "\nPage Stack:\n";
 			foreach (EZUIData.Page page in pageStack)
-				s += $"\t{page.name}\n";
-			Debug.LogError(s);
+				stack += $"\t{page.key}\n";
+			
+			Debug.Log(stack);
 		}
 	}
 }

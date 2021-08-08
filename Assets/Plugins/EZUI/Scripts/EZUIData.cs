@@ -6,15 +6,30 @@ namespace EZUI
 	[CreateAssetMenu(fileName = "EZUIData", menuName = "EZUI/EZUIData", order = 0)]
 	public class EZUIData : ScriptableObject
 	{
-		public List<string> panels = new List<string>();
-		public List<Page> pages = new List<Page>();
+		[SerializeField] private List<Page> pages = new List<Page>();
+		[SerializeField] private Page getDefaultPage;
 		
-		public Page GetDefaultPage() => pages.Find(x => x.defaultPage);
+		public List<string> panels = new List<string>();
+		public Dictionary<string, Page> pagesDictionary = new Dictionary<string, Page>();
+		
+		public Page GetDefaultPage() => getDefaultPage;
+		
+		internal void Init()
+		{
+			for (int i = 0; i < pages.Count; i++)
+			{
+				Page page = pages[i];
+				if (page.defaultPage)
+					getDefaultPage = page;
+				
+				pagesDictionary.Add(page.key, page);
+			}
+		}
 		
 		[System.Serializable]
 		public class Page
 		{
-			public string name;
+			public string key;
 			public List<string> showingPanels = new List<string>();
 			public List<string> ignoringPanels = new List<string>();
 			public bool defaultPage;

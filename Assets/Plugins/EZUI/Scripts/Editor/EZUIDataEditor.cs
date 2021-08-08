@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using EZUI;
 using EZUI_Editor;
 using UnityEditor;
@@ -10,7 +9,13 @@ namespace EZUIEditor
 	[CustomEditor(typeof(EZUIData))]
 	public class EZUIDataEditor : Editor
 	{
-		private EZUIData.Page _edit;
+		private SerializedProperty pagesProperty;
+		private EZUIData.Page edit;
+		
+		private void OnEnable()
+		{
+			pagesProperty = serializedObject.FindProperty("pages");
+		}
 		
 		public override void OnInspectorGUI()
 		{
@@ -41,27 +46,28 @@ namespace EZUIEditor
 			GUILayout.Label("Name", EditorStyles.centeredGreyMiniLabel, GUILayout.Width(200));
 
 			EditorGUILayout.EndHorizontal();
-
-			foreach (EZUIData.Page page in data.pages)
+			
+			List<EZUIData.Page> pages = (List<EZUIData.Page>) EditorUtils.GetTargetObjectOfProperty(pagesProperty);
+			foreach (EZUIData.Page page in pages)
 			{
 				EditorGUILayout.BeginHorizontal();
 				if (GUILayout.Button("X", GUILayout.Width(20)))
 				{
-					data.pages.Remove(page);
+					pages.Remove(page);
 					break;
 				}
 
 				if (GUILayout.Button("Edit", GUILayout.Width(50)))
 				{
-					if (_edit == page)
-						_edit = null;
+					if (edit == page)
+						edit = null;
 					else
-						_edit = page;
+						edit = page;
 				}
 
-				page.name = EditorGUILayout.TextField(page.name, GUILayout.Width(200));
-
-				EZUIData.Page defaultGroup = data.pages.Find(x => x.defaultPage);
+				page.key = EditorGUILayout.TextField(page.key, GUILayout.Width(200));
+				
+				EZUIData.Page defaultGroup = pages.Find(x => x.defaultPage);
 
 				if (defaultGroup == null)
 				{
@@ -90,7 +96,7 @@ namespace EZUIEditor
 
 				EditorGUILayout.EndHorizontal();
 
-				if (_edit == page)
+				if (edit == page)
 				{
 					EditorGUILayout.BeginHorizontal();
 					GUILayout.Space(40);
@@ -209,7 +215,7 @@ namespace EZUIEditor
 			}
 
 			if (GUILayout.Button("Add", GUILayout.Width(60)))
-				data.pages.Add(new EZUIData.Page());
+				pages.Add(new EZUIData.Page());
 
 			EditorGUILayout.EndVertical();
 

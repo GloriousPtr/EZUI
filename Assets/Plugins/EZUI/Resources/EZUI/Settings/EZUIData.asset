@@ -12,29 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a0f7b88a8f407a941d1d3486aacb53, type: 3}
   m_Name: EZUIData
   m_EditorClassIdentifier: 
+  pages:
+  - key: MenuGroup
+    showingPanels:
+    - Menu
+    ignoringPanels: []
+    defaultPage: 1
+  - key: SettingsGroup
+    showingPanels:
+    - Settings
+    ignoringPanels: []
+    defaultPage: 0
+  - key: ShopGroup
+    showingPanels:
+    - Shop
+    ignoringPanels: []
+    defaultPage: 0
+  - key: StatsGroup
+    showingPanels:
+    - Stats
+    ignoringPanels: []
+    defaultPage: 0
+  defaultPage:
+    key: 
+    showingPanels: []
+    ignoringPanels: []
+    defaultPage: 0
   panels:
   - Menu
   - Settings
   - Shop
   - Stats
-  pages:
-  - name: MenuGroup
-    showingPanels:
-    - Menu
-    ignoringPanels: []
-    defaultPage: 1
-  - name: SettingsGroup
-    showingPanels:
-    - Settings
-    ignoringPanels: []
-    defaultPage: 0
-  - name: ShopGroup
-    showingPanels:
-    - Shop
-    ignoringPanels: []
-    defaultPage: 0
-  - name: StatsGroup
-    showingPanels:
-    - Stats
-    ignoringPanels: []
-    defaultPage: 0
