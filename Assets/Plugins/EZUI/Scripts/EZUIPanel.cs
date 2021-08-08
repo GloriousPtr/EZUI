@@ -16,12 +16,12 @@ namespace EZUI
 		
 		internal static int RunningAnimations { get; private set; }
 
-		internal void SetVisible(bool active, bool immidiate = false)
+		internal void SetVisible(bool active, bool immediate = false)
 		{
 			if (active == gameObject.activeSelf)
 				return;
 			
-			if (immidiate)
+			if (immediate)
 			{
 				gameObject.SetActive(active);
 				return;
@@ -33,7 +33,7 @@ namespace EZUI
 			if (active && useCustomStartPosition)
 				rectTransform.localPosition = customStartPosition;
 			
-			StartTransition(active ? showData : hideData, immidiate, () =>
+			StartTransition(active ? showData : hideData, immediate, () =>
 			{
 				if (!active)
 					gameObject.SetActive(false);

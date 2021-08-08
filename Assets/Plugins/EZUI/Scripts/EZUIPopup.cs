@@ -9,12 +9,12 @@ namespace EZUI
 		[SerializeField] private AnimationData showData = new AnimationData(State.In, Mode.None);
 		[SerializeField] private AnimationData hideData = new AnimationData(State.Out, Mode.None);
 		
-		internal void SetVisible(bool active, bool immidiate = false)
+		internal void SetVisible(bool active, bool immediate = false)
 		{
 			if (active == gameObject.activeSelf)
 				return;
 			
-			if (immidiate)
+			if (immediate)
 			{
 				gameObject.SetActive(active);
 				return;
@@ -23,7 +23,7 @@ namespace EZUI
 			if (!gameObject.activeSelf)
 				gameObject.SetActive(true);
 
-			StartTransition(active ? showData : hideData, immidiate, () =>
+			StartTransition(active ? showData : hideData, immediate, () =>
 			{
 				if (!active)
 					gameObject.SetActive(false);
