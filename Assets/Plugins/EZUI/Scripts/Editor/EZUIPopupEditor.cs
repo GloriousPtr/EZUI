@@ -43,9 +43,9 @@ namespace EZUI_Editor
 			_defaultColor = GUI.backgroundColor;
 			
 			EditorGUILayout.BeginVertical("Box", GUILayout.Height(50));
-			EditorGUILayout.LabelField(HeadingTemplate("EZUI Panel", 35), HeadingStyle);
+			EditorGUILayout.LabelField(HeadingTemplate("EZUI Popup", 35), HeadingStyle);
 			EditorGUILayout.EndHorizontal();
-
+			
 			EditorGUILayout.Space(20);
 			
 			EditorGUILayout.BeginHorizontal();

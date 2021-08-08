@@ -17,12 +17,6 @@ MonoBehaviour:
   - Settings
   - Shop
   - Stats
-  - Popup
-  - Popup2
-  - Stats2
-  - Shop2
-  - Settings2
-  - Menu2
   pages:
   - name: MenuGroup
     showingPanels:
@@ -43,52 +37,4 @@ MonoBehaviour:
     showingPanels:
     - Stats
     ignoringPanels: []
-    defaultPage: 0
-  - name: PopupGroup
-    showingPanels:
-    - Popup
-    ignoringPanels:
-    - Menu
-    - Settings
-    - Shop
-    - Stats
-    - Popup2
-    - Stats2
-    - Shop2
-    - Settings2
-    - Menu2
-    defaultPage: 0
-  - name: Menu2
-    showingPanels:
-    - Menu2
-    ignoringPanels: []
-    defaultPage: 0
-  - name: Settings2
-    showingPanels:
-    - Settings2
-    ignoringPanels: []
-    defaultPage: 0
-  - name: Shop2
-    showingPanels:
-    - Shop2
-    ignoringPanels: []
-    defaultPage: 0
-  - name: Stats2
-    showingPanels:
-    - Stats2
-    ignoringPanels: []
-    defaultPage: 0
-  - name: Popup2
-    showingPanels:
-    - Popup2
-    ignoringPanels:
-    - Menu
-    - Settings
-    - Shop
-    - Stats
-    - Popup
-    - Stats2
-    - Shop2
-    - Settings2
-    - Menu2
     defaultPage: 0
