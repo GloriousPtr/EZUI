@@ -1,6 +1,5 @@
 ﻿using TMPro;
 using UnityEditor;
-using UnityEditor.AnimatedValues;
 using UnityEngine;
 using EZUI;
 
@@ -67,11 +66,11 @@ namespace EZUI_Editor
 			EditorGUILayout.EndHorizontal();
 
 			EditorGUILayout.Space(20);
-			DrawAnimationData("On Pointer Enter", previewEnabled, button, button.onPointerEnter, onPointerEnter, _onPointerEnterAnimBoolGroup);
-			DrawAnimationData("On Pointer Exit", previewEnabled, button, button.onPointerExit, onPointerExit, _onPointerExitAnimBoolGroup);
-			DrawAnimationData("On Pointer Down", previewEnabled, button, button.onPointerDown, onPointerDown, _onPointerDownAnimBoolGroup);
-			DrawAnimationData("On Pointer Up", previewEnabled, button, button.onPointerUp, onPointerUp, _onPointerUpAnimBoolGroup);
-			DrawAnimationData("On Click", previewEnabled, button, button.onClick, onClick, _onClickAnimBoolGroup);
+			DrawAnimationData("On Pointer Enter", previewEnabled, button, onPointerEnter, _onPointerEnterAnimBoolGroup);
+			DrawAnimationData("On Pointer Exit", previewEnabled, button, onPointerExit, _onPointerExitAnimBoolGroup);
+			DrawAnimationData("On Pointer Down", previewEnabled, button, onPointerDown, _onPointerDownAnimBoolGroup);
+			DrawAnimationData("On Pointer Up", previewEnabled, button, onPointerUp, _onPointerUpAnimBoolGroup);
+			DrawAnimationData("On Click", previewEnabled, button, onClick, _onClickAnimBoolGroup);
 			
 			EditorGUILayout.Space(20);
 			EditorGUILayout.LabelField(HeadingTemplate("Label"), HeadingStyle);

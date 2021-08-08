@@ -48,9 +48,8 @@ namespace EZUI.Animation
 		
 		private static Tween MoveIn(this Transform transform, MoveData moveData)
 		{
-			Vector3 to = transform.localPosition;
 			transform.localPosition = moveData.from;
-			return transform.DOLocalMove(to, moveData.duration)
+			return transform.DOLocalMove(moveData.initialValue, moveData.duration)
 				.SetDelay(moveData.startDelay)
 				.SetEase(moveData.ease);
 		}
@@ -117,13 +116,11 @@ namespace EZUI.Animation
 		
 		private static Tween AnchoredMoveIn(this RectTransform rectTransform, MoveData moveData)
 		{
-			Vector2 to = rectTransform.anchoredPosition;
-			
 			bool customPosition = moveData.moveDirection == MoveDirection.CustomPosition;
 			Vector2 anchoredPosition = moveData.moveDirection.GetAnchoredPosition(rectTransform);
 			
 			rectTransform.anchoredPosition = customPosition ? (Vector2) moveData.from : anchoredPosition;
-			return rectTransform.DOAnchorPos(to, moveData.duration)
+			return rectTransform.DOAnchorPos(moveData.initialValue, moveData.duration)
 				.SetDelay(moveData.startDelay)
 				.SetEase(moveData.ease);
 		}
@@ -193,9 +190,8 @@ namespace EZUI.Animation
 		
 		private static Tween RotateIn(this Transform transform, RotationData rotationData)
 		{
-			Vector3 to = transform.localEulerAngles;
 			transform.localEulerAngles = rotationData.from;
-			return transform.DOLocalRotate(to, rotationData.duration, rotationData.rotateMode)
+			return transform.DOLocalRotate(rotationData.initialValue, rotationData.duration, rotationData.rotateMode)
 				.SetDelay(rotationData.startDelay)
 				.SetEase(rotationData.ease);
 		}
@@ -264,9 +260,8 @@ namespace EZUI.Animation
 		
 		private static Tween ScaleIn(this Transform transform, ScaleData scaleData)
 		{
-			Vector3 to = transform.localScale;
 			transform.localScale = scaleData.from;
-			return transform.DOScale(to, scaleData.duration)
+			return transform.DOScale(scaleData.initialValue, scaleData.duration)
 				.SetDelay(scaleData.startDelay)
 				.SetEase(scaleData.ease);
 		}
@@ -324,9 +319,8 @@ namespace EZUI.Animation
 
 		private static Tween FadeIn(this CanvasGroup canvasGroup, FloatData floatData)
 		{
-			float to = canvasGroup.alpha;
 			canvasGroup.alpha = floatData.from;
-			return canvasGroup.DOFade(to, floatData.duration)
+			return canvasGroup.DOFade(floatData.initialValue, floatData.duration)
 				.SetDelay(floatData.startDelay)
 				.SetEase(floatData.ease);
 		}

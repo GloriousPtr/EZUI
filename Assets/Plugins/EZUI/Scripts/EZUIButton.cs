@@ -9,16 +9,15 @@ namespace EZUI
 	[RequireComponent(typeof(Button))]
 	public class EZUIButton : EZUIBase, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 	{
-		public AnimationData onPointerEnter = new AnimationData(State.None, Mode.Punch);
-		public AnimationData onPointerExit = new AnimationData(State.None, Mode.Punch);
-		public AnimationData onPointerDown = new AnimationData(State.None, Mode.Punch);
-		public AnimationData onPointerUp = new AnimationData(State.None, Mode.Punch);
+		[SerializeField] private AnimationData onPointerEnter = new AnimationData(State.None, Mode.Punch);
+		[SerializeField] private AnimationData onPointerExit = new AnimationData(State.None, Mode.Punch);
+		[SerializeField] private AnimationData onPointerDown = new AnimationData(State.None, Mode.Punch);
+		[SerializeField] private AnimationData onPointerUp = new AnimationData(State.None, Mode.Punch);
+		[SerializeField] private AnimationData onClick = new AnimationData(State.None, Mode.Punch);
 		
-		public AnimationData onClick = new AnimationData(State.None, Mode.Punch);
+		[SerializeField] private string displayText;
+		[SerializeField] private Button button;
 		
-		public string displayText;
-		
-		public Button button;
 		public TextMeshProUGUI textLabel;
 		
 		private void Start()
@@ -26,13 +25,17 @@ namespace EZUI
 			button.onClick.AddListener(OnClick);
 		}
 
-		public override bool UseCustomStartPosition(out Vector3 customPosition)
+		protected override bool UseCustomStartPosition(out Vector3 customPosition)
 		{
 			customPosition = rectTransform.anchoredPosition;
 			return false;
 		}
 
-		public override void Init()
+		protected override void SetInitialState()
+		{
+		}
+
+		protected override void Init()
 		{
 			base.Init();
 			

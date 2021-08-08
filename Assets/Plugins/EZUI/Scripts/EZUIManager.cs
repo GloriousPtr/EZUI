@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System;
-using DG.Tweening;
 
 namespace EZUI
 {
@@ -12,7 +11,12 @@ namespace EZUI
 		[SerializeField] private List<Transform> UImodules = new List<Transform>();
 		
 		private List<EZUIPanel> panels = new List<EZUIPanel>();
+		private List<EZUIPopup> popups = new List<EZUIPopup>();
+		private readonly Stack<EZUIPopup> popupStack = new Stack<EZUIPopup>();
 		private readonly Stack<EZUIData.Page> pageStack = new Stack<EZUIData.Page>();
+		
+		public event Action<string> OnShowPage;
+		public event Action ShouldQuit;
 		
 		public string CurrentPage { get; private set; }
 
@@ -31,11 +35,7 @@ namespace EZUI
 			}
 		}
 		
-		public static event Action<string> OnShowPage;
-
 		private static EZUIData data;
-		
-		public EZUIData.Page GetDefaultPage() => Data.pages.Find(x => x.defaultPage);
 		
 		private void Awake()
 		{
@@ -53,11 +53,20 @@ namespace EZUI
 		{
 			Init();
 			
-			EZUIData.Page defaultPage = GetDefaultPage();
+			EZUIData.Page defaultPage = Data.GetDefaultPage();
 			if (defaultPage != null)
+			{
+				HideAll(true);
 				ShowPage(defaultPage, true);
+			}
 		}
 		
+		private void Update()
+		{
+			if (Input.GetKeyDown(KeyCode.Escape))
+				GoBack();
+		}
+
 		private void Init()
 		{
 			panels.Clear();
@@ -68,6 +77,16 @@ namespace EZUI
 
 			if (Application.isEditor)
 				panels.Sort((a, b) => { return string.Compare(a.name, b.name); });
+			
+			
+			popups.Clear();
+			popups.AddRange(GetComponentsInChildren<EZUIPopup>(true));
+
+			foreach (Transform module in UImodules)
+				popups.AddRange(module.GetComponentsInChildren<EZUIPopup>(true));
+
+			if (Application.isEditor)
+				popups.Sort((a, b) => { return string.Compare(a.name, b.name); });
 		}
 
 		private bool ShowPage(EZUIData.Page page, bool immediate = false, bool addToBackStack = true)
@@ -76,6 +95,9 @@ namespace EZUI
 				return false;
 			
 			CurrentPage = page.name;
+
+			foreach (EZUIPopup popup in popups)
+				popup.SetVisible(false);
 			
 			foreach (EZUIPanel panel in panels)
 			{
@@ -90,6 +112,7 @@ namespace EZUI
 			if (!addToBackStack)
 				return true;
 			
+			popupStack.Clear();
 			while (pageStack.Contains(page))
 				pageStack.Pop();
 			
@@ -112,19 +135,61 @@ namespace EZUI
 				ShowPage(page, immediate);
 		}
 
-		public void HideAll(bool clearBackStack = true)
+		public void ShowPopup(string popupName)
+		{
+			EZUIPopup popup = popups.Find(x => x.key == popupName);
+			
+			if (popup == null)
+				return;
+			
+			popupStack.Push(popup);
+			popup.SetVisible(true);
+		}
+		
+		public void HidePopup(string popupName)
+		{
+			EZUIPopup popup = popups.Find(x => x.key == popupName);
+			
+			if (popup == null)
+				return;
+			
+			while (popupStack.Contains(popup))
+				popupStack.Pop();
+			
+			popup.SetVisible(false);
+		}
+		
+		public void HideAll(bool immediate, bool clearBackStack)
+		{
+			if (clearBackStack)
+			{
+				popupStack.Clear();
+				pageStack.Clear();
+			}
+			
+			HideAll(immediate);
+		}
+		
+		public void HideAll(bool immediate)
 		{
 			foreach (EZUIPanel panel in panels)
-				panel.SetVisible(false);
+				panel.SetVisible(false, immediate);
 			
-			pageStack.Clear();
+			foreach (EZUIPopup popup in popups)
+				popup.SetVisible(false, immediate);
 		}
 
-		public void ShowPreviousPage()
+		public void GoBack()
 		{
-			if (pageStack.Count < 2)
+			if (popupStack.Count > 0)
 			{
-				Debug.LogError("Can't go back, only page left is: " + pageStack.Peek().name);
+				popupStack.Pop().SetVisible(false);
+				return;
+			}
+			
+			if (pageStack.Count <= 1)
+			{
+				ShouldQuit?.Invoke();
 				return;
 			}
 

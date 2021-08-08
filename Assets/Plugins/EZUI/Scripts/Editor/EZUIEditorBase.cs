@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.AnimatedValues;
@@ -61,7 +60,7 @@ namespace EZUI_Editor
 			HeadingStyle = new GUIStyle() { richText = true };
 		}
 
-		public void DrawAnimationData(string label, bool previewEnabled, EZUIBase ezuiBase, AnimationData animationData, SerializedProperty serializedProperty, AnimBoolGroup animBoolsGroup)
+		public void DrawAnimationData(string label, bool previewEnabled, EZUIBase ezuiBase, SerializedProperty serializedProperty, AnimBoolGroup animBoolsGroup)
 		{
 			SerializedProperty expandedProperty = serializedProperty.FindPropertyRelative("expanded");
 			SerializedProperty isAnyAnimationActive = serializedProperty.FindPropertyRelative("isAnyAnimationActive");
@@ -96,7 +95,7 @@ namespace EZUI_Editor
 							previewEnabled = !Application.isPlaying;
 						GUI.enabled = previewEnabled;
 						if (GUILayout.Button("Preview", EZUISkin.MediumButtonDefault))
-							EZUIPreviewHelper.Preview(ezuiBase, animationData);
+							EZUIPreviewHelper.Preview(ezuiBase, (AnimationData) EditorUtils.GetTargetObjectOfProperty(serializedProperty));
 						if (!previewEnabled)
 							GUI.enabled = true;
 							

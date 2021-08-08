@@ -9,6 +9,8 @@ namespace EZUI
 		public List<string> panels = new List<string>();
 		public List<Page> pages = new List<Page>();
 		
+		public Page GetDefaultPage() => pages.Find(x => x.defaultPage);
+		
 		[System.Serializable]
 		public class Page
 		{

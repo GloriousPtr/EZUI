@@ -16,6 +16,7 @@ namespace EZUI.Animation
 		public float startDelay;
 		public float duration;
 		public MoveDirection moveDirection;
+		public Vector3 initialValue;
 		public Vector3 from;
 		public Vector3 to;
 		public Vector3 by;
@@ -32,6 +33,7 @@ namespace EZUI.Animation
 			startDelay = 0.0f;
 			duration = 1.0f;
 			moveDirection = MoveDirection.Left;
+			initialValue = StaticData.ZeroVector;
 			from = StaticData.ZeroVector;
 			to = StaticData.ZeroVector;
 			by = StaticData.RightVector * 100;
@@ -49,6 +51,7 @@ namespace EZUI.Animation
 		
 		public float startDelay;
 		public float duration;
+		public Vector3 initialValue;
 		public Vector3 from;
 		public Vector3 to;
 		public Vector3 by;
@@ -64,6 +67,7 @@ namespace EZUI.Animation
 
 			startDelay = 0.0f;
 			duration = 1.0f;
+			initialValue = StaticData.ZeroVector;
 			from = StaticData.ZeroVector;
 			to = StaticData.ZeroVector;
 			by = StaticData.ForwardVector * 45.0f;
@@ -82,6 +86,7 @@ namespace EZUI.Animation
 
 		public float startDelay;
 		public float duration;
+		public Vector3 initialValue;
 		public Vector3 from;
 		public Vector3 to;
 		public Vector3 by;
@@ -96,6 +101,7 @@ namespace EZUI.Animation
 
 			startDelay = 0.0f;
 			duration = 1.0f;
+			initialValue = StaticData.UnitVector;
 			from = state == State.None ? StaticData.UnitVector : StaticData.ZeroVector;
 			to = StaticData.ZeroVector;
 			by = StaticData.UnitVector * 0.1f;
@@ -112,6 +118,7 @@ namespace EZUI.Animation
 		
 		public float startDelay;
 		public float duration;
+		public float initialValue;
 		public float from;
 		public float to;
 		public Ease ease;
@@ -120,6 +127,7 @@ namespace EZUI.Animation
 		{
 			this.state = state;
 
+			initialValue = 1.0f;
 			startDelay = 0.0f;
 			duration = 1.0f;
 			from = 0.0f;

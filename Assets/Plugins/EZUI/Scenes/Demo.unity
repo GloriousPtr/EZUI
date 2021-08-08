@@ -210,7 +210,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1441887928}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
-        m_MethodName: ShowPreviousPage
+        m_MethodName: GoBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -283,6 +283,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -294,6 +295,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -306,6 +308,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 1.1, y: 1.1, z: 1.1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -316,6 +319,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -341,6 +345,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -352,6 +357,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -364,6 +370,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1.1, y: 1.1, z: 1.1}
       to: {x: 1, y: 1, z: 1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -374,6 +381,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -399,6 +407,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -410,6 +419,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -422,6 +432,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -432,6 +443,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -457,6 +469,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -468,6 +481,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -480,6 +494,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -490,6 +505,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -515,6 +531,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -526,6 +543,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -538,6 +556,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -548,6 +567,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -1385,6 +1405,106 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329912143}
   m_CullTransparentMesh: 1
+--- !u!1 &332927119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 332927124}
+  - component: {fileID: 332927123}
+  - component: {fileID: 332927122}
+  - component: {fileID: 332927121}
+  m_Layer: 5
+  m_Name: PopupCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &332927121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332927119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &332927122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332927119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1080, y: 1920}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.5
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &332927123
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332927119}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
+--- !u!224 &332927124
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332927119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1147705988}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &340668035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,6 +1824,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445462097}
   m_CullTransparentMesh: 1
+--- !u!1 &490498585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 490498586}
+  - component: {fileID: 490498588}
+  - component: {fileID: 490498587}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &490498586
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490498585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 937372298}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -150}
+  m_SizeDelta: {x: 0, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &490498587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490498585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Popup
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &490498588
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490498585}
+  m_CullTransparentMesh: 0
 --- !u!1 &499218384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,6 +2571,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -2328,6 +2583,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -2340,6 +2596,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 1.1, y: 1.1, z: 1.1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -2350,6 +2607,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -2375,6 +2633,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -2386,6 +2645,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -2398,6 +2658,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1.1, y: 1.1, z: 1.1}
       to: {x: 1, y: 1, z: 1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -2408,6 +2669,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -2433,6 +2695,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -2444,6 +2707,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -2456,6 +2720,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -2466,6 +2731,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -2491,6 +2757,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -2502,6 +2769,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -2514,6 +2782,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -2524,6 +2793,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -2549,6 +2819,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -2560,6 +2831,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -2572,6 +2844,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -2582,6 +2855,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -2778,14 +3052,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1441887928}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
-        m_MethodName: ShowPage
+        m_MethodName: ShowPopup
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: PopupGroup
+          m_StringArgument: Popup
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &661010743
@@ -2851,6 +3125,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -2862,6 +3137,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -2874,6 +3150,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 1.1, y: 1.1, z: 1.1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -2884,6 +3161,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -2909,6 +3187,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -2920,6 +3199,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -2932,6 +3212,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1.1, y: 1.1, z: 1.1}
       to: {x: 1, y: 1, z: 1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -2942,6 +3223,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -2967,6 +3249,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -2978,6 +3261,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -2990,6 +3274,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -3000,6 +3285,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -3025,6 +3311,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -3036,6 +3323,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -3048,6 +3336,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -3058,6 +3347,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -3083,6 +3373,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -3094,6 +3385,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -3106,6 +3398,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -3116,6 +3409,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -3175,7 +3469,7 @@ RectTransform:
   m_Children:
   - {fileID: 2114407267}
   m_Father: {fileID: 1441887932}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3195,8 +3489,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: Stats
-  useCustomStartPosition: 1
-  customStartPosition: {x: 0, y: 0, z: 0}
   showData:
     defaultState: 1
     move: 0
@@ -3210,6 +3502,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 0.5
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 2000, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -3221,6 +3514,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.5
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 50}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -3233,6 +3527,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.3
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -3243,6 +3538,7 @@ MonoBehaviour:
       state: 1
       startDelay: 0
       duration: 0.3
+      initialValue: 1
       from: 0
       to: 1
       ease: 27
@@ -3268,6 +3564,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 0.3
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -3279,6 +3576,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -3291,6 +3589,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -3301,6 +3600,7 @@ MonoBehaviour:
       state: 2
       startDelay: 0
       duration: 0.3
+      initialValue: 1
       from: 1
       to: 0
       ease: 27
@@ -3313,6 +3613,8 @@ MonoBehaviour:
     isAnimating: 0
     expanded: 1
     isAnyAnimationActive: 1
+  useCustomStartPosition: 1
+  customStartPosition: {x: 0, y: 0, z: 0}
 --- !u!225 &688421788
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3408,6 +3710,478 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774833376}
   m_CullTransparentMesh: 1
+--- !u!1 &849004284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849004285}
+  - component: {fileID: 849004290}
+  - component: {fileID: 849004289}
+  - component: {fileID: 849004288}
+  - component: {fileID: 849004287}
+  - component: {fileID: 849004286}
+  m_Layer: 5
+  m_Name: BackButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &849004285
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849004284}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1828571692}
+  m_Father: {fileID: 937372298}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 200}
+  m_SizeDelta: {x: 300, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &849004286
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849004284}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &849004287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849004284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4172cca7996a90649a7cd818494fa801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPointerEnter:
+    defaultState: 0
+    move: 0
+    rotation: 0
+    scale: 1
+    fade: 0
+    moveData:
+      state: 0
+      mode: 1
+      moveMode: 0
+      startDelay: 0
+      duration: 1
+      moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 20, y: 0, z: 0}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+    rotationData:
+      state: 0
+      mode: 1
+      startDelay: 0
+      duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0, y: 0, z: 45}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+      rotateMode: 1
+    scaleData:
+      state: 0
+      mode: 0
+      startDelay: 0
+      duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
+      from: {x: 1, y: 1, z: 1}
+      to: {x: 1.1, y: 1.1, z: 1.1}
+      by: {x: 0.1, y: 0.1, z: 0.1}
+      elasticity: 1
+      vibrato: 12
+      ease: 18
+    fadeData:
+      state: 0
+      startDelay: 0
+      duration: 1
+      initialValue: 1
+      from: 0
+      to: 0
+      ease: 1
+    onStarted:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    isAnimating: 0
+    expanded: 1
+    isAnyAnimationActive: 1
+  onPointerExit:
+    defaultState: 0
+    move: 0
+    rotation: 0
+    scale: 1
+    fade: 0
+    moveData:
+      state: 0
+      mode: 1
+      moveMode: 0
+      startDelay: 0
+      duration: 1
+      moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 20, y: 0, z: 0}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+    rotationData:
+      state: 0
+      mode: 1
+      startDelay: 0
+      duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0, y: 0, z: 45}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+      rotateMode: 1
+    scaleData:
+      state: 0
+      mode: 0
+      startDelay: 0
+      duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
+      from: {x: 1.1, y: 1.1, z: 1.1}
+      to: {x: 1, y: 1, z: 1}
+      by: {x: 0.1, y: 0.1, z: 0.1}
+      elasticity: 1
+      vibrato: 12
+      ease: 18
+    fadeData:
+      state: 0
+      startDelay: 0
+      duration: 1
+      initialValue: 1
+      from: 0
+      to: 0
+      ease: 1
+    onStarted:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    isAnimating: 0
+    expanded: 1
+    isAnyAnimationActive: 1
+  onPointerDown:
+    defaultState: 0
+    move: 0
+    rotation: 0
+    scale: 0
+    fade: 0
+    moveData:
+      state: 0
+      mode: 1
+      moveMode: 0
+      startDelay: 0
+      duration: 1
+      moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 100, y: 0, z: 0}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+    rotationData:
+      state: 0
+      mode: 1
+      startDelay: 0
+      duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0, y: 0, z: 45}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+      rotateMode: 1
+    scaleData:
+      state: 0
+      mode: 1
+      startDelay: 0
+      duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
+      from: {x: 1, y: 1, z: 1}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0.1, y: 0.1, z: 0.1}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+    fadeData:
+      state: 0
+      startDelay: 0
+      duration: 1
+      initialValue: 1
+      from: 0
+      to: 0
+      ease: 1
+    onStarted:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    isAnimating: 0
+    expanded: 0
+    isAnyAnimationActive: 0
+  onPointerUp:
+    defaultState: 0
+    move: 0
+    rotation: 0
+    scale: 0
+    fade: 0
+    moveData:
+      state: 0
+      mode: 1
+      moveMode: 0
+      startDelay: 0
+      duration: 1
+      moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 100, y: 0, z: 0}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+    rotationData:
+      state: 0
+      mode: 1
+      startDelay: 0
+      duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0, y: 0, z: 45}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+      rotateMode: 1
+    scaleData:
+      state: 0
+      mode: 1
+      startDelay: 0
+      duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
+      from: {x: 1, y: 1, z: 1}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0.1, y: 0.1, z: 0.1}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+    fadeData:
+      state: 0
+      startDelay: 0
+      duration: 1
+      initialValue: 1
+      from: 0
+      to: 0
+      ease: 1
+    onStarted:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    isAnimating: 0
+    expanded: 0
+    isAnyAnimationActive: 0
+  onClick:
+    defaultState: 0
+    move: 0
+    rotation: 0
+    scale: 1
+    fade: 0
+    moveData:
+      state: 0
+      mode: 1
+      moveMode: 0
+      startDelay: 0
+      duration: 1
+      moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 100, y: 0, z: 0}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+    rotationData:
+      state: 0
+      mode: 1
+      startDelay: 0
+      duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0, y: 0, z: 45}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+      rotateMode: 1
+    scaleData:
+      state: 0
+      mode: 1
+      startDelay: 0
+      duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
+      from: {x: 1, y: 1, z: 1}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0.1, y: 0.1, z: 0.1}
+      elasticity: 1
+      vibrato: 5
+      ease: 25
+    fadeData:
+      state: 0
+      startDelay: 0
+      duration: 1
+      initialValue: 1
+      from: 0
+      to: 0
+      ease: 1
+    onStarted:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    isAnimating: 0
+    expanded: 1
+    isAnyAnimationActive: 1
+  displayText: Back
+  button: {fileID: 0}
+  textLabel: {fileID: 1828571693}
+--- !u!114 &849004288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849004284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 849004289}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1441887928}
+        m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
+        m_MethodName: GoBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &849004289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849004284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &849004290
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849004284}
+  m_CullTransparentMesh: 0
 --- !u!1 &911884748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3483,6 +4257,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911884748}
   m_CullTransparentMesh: 1
+--- !u!1 &937372297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937372298}
+  - component: {fileID: 937372300}
+  - component: {fileID: 937372299}
+  m_Layer: 5
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &937372298
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937372297}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 490498586}
+  - {fileID: 849004285}
+  m_Father: {fileID: 1147705988}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 600, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &937372299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937372297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.15686274, g: 0.5928205, b: 0.7372549, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &937372300
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937372297}
+  m_CullTransparentMesh: 0
 --- !u!1 &939878087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4312,8 +5163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: Menu
-  useCustomStartPosition: 1
-  customStartPosition: {x: 0, y: 0, z: 0}
   showData:
     defaultState: 1
     move: 0
@@ -4327,6 +5176,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 0.5
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 2000, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -4338,6 +5188,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.5
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 50}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -4350,6 +5201,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.3
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -4360,6 +5212,7 @@ MonoBehaviour:
       state: 1
       startDelay: 0
       duration: 0.3
+      initialValue: 1
       from: 0
       to: 1
       ease: 27
@@ -4385,6 +5238,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 0.3
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -4396,6 +5250,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -4408,6 +5263,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -4418,6 +5274,7 @@ MonoBehaviour:
       state: 2
       startDelay: 0
       duration: 0.3
+      initialValue: 1
       from: 1
       to: 0
       ease: 27
@@ -4430,6 +5287,8 @@ MonoBehaviour:
     isAnimating: 0
     expanded: 1
     isAnyAnimationActive: 1
+  useCustomStartPosition: 1
+  customStartPosition: {x: 0, y: 0, z: 0}
 --- !u!225 &1104736538
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4546,6 +5405,202 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -10, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1147705987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1147705988}
+  - component: {fileID: 1147705991}
+  - component: {fileID: 1147705990}
+  - component: {fileID: 1147705989}
+  m_Layer: 5
+  m_Name: Popup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1147705988
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147705987}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 937372298}
+  m_Father: {fileID: 332927124}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 2807, y: 2679}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1147705989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147705987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43ba60dd3a343b7aa129a8ac6c9bb7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Popup
+  showData:
+    defaultState: 1
+    move: 0
+    rotation: 0
+    scale: 1
+    fade: 1
+    moveData:
+      state: 1
+      mode: 0
+      moveMode: 0
+      startDelay: 0
+      duration: 1
+      moveDirection: 0
+      initialValue: {x: 2807, y: 2679, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 100, y: 0, z: 0}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+    rotationData:
+      state: 1
+      mode: 0
+      startDelay: 0
+      duration: 1
+      initialValue: {x: -0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0, y: 0, z: 45}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+      rotateMode: 1
+    scaleData:
+      state: 1
+      mode: 0
+      startDelay: 0
+      duration: 0.3
+      initialValue: {x: 1, y: 1, z: 1}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0.1, y: 0.1, z: 0.1}
+      elasticity: 1
+      vibrato: 12
+      ease: 27
+    fadeData:
+      state: 1
+      startDelay: 0
+      duration: 1
+      initialValue: 1
+      from: 0
+      to: 0
+      ease: 27
+    onStarted:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    isAnimating: 0
+    expanded: 1
+    isAnyAnimationActive: 1
+  hideData:
+    defaultState: 2
+    move: 0
+    rotation: 0
+    scale: 1
+    fade: 1
+    moveData:
+      state: 2
+      mode: 0
+      moveMode: 0
+      startDelay: 0
+      duration: 1
+      moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 100, y: 0, z: 0}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+    rotationData:
+      state: 2
+      mode: 0
+      startDelay: 0
+      duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0, y: 0, z: 45}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+      rotateMode: 1
+    scaleData:
+      state: 2
+      mode: 0
+      startDelay: 0
+      duration: 0.3
+      initialValue: {x: 1, y: 1, z: 1}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0.1, y: 0.1, z: 0.1}
+      elasticity: 1
+      vibrato: 12
+      ease: 27
+    fadeData:
+      state: 2
+      startDelay: 0
+      duration: 0.3
+      initialValue: 1
+      from: 0
+      to: 0
+      ease: 27
+    onStarted:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    isAnimating: 0
+    expanded: 1
+    isAnyAnimationActive: 1
+--- !u!225 &1147705990
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147705987}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!222 &1147705991
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147705987}
+  m_CullTransparentMesh: 0
 --- !u!1 &1241025928
 GameObject:
   m_ObjectHideFlags: 0
@@ -5061,7 +6116,7 @@ GameObject:
   - component: {fileID: 1441887929}
   - component: {fileID: 1441887928}
   m_Layer: 5
-  m_Name: UI
+  m_Name: PanelCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5079,7 +6134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35da88ff551ad894e88a0c1012b4fdff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UImodules: []
+  UImodules:
+  - {fileID: 332927124}
 --- !u!114 &1441887929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5154,7 +6210,6 @@ RectTransform:
   m_Children:
   - {fileID: 2118101282}
   - {fileID: 1104736540}
-  - {fileID: 2935405013027613625}
   - {fileID: 5632294919697160950}
   - {fileID: 688421786}
   m_Father: {fileID: 0}
@@ -5325,6 +6380,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -5336,6 +6392,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -5348,6 +6405,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 1.1, y: 1.1, z: 1.1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -5358,6 +6416,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -5368,7 +6427,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     isAnimating: 0
-    expanded: 0
+    expanded: 1
     isAnyAnimationActive: 1
   onPointerExit:
     defaultState: 0
@@ -5383,6 +6442,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -5394,6 +6454,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -5406,6 +6467,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1.1, y: 1.1, z: 1.1}
       to: {x: 1, y: 1, z: 1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -5416,6 +6478,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -5426,7 +6489,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     isAnimating: 0
-    expanded: 0
+    expanded: 1
     isAnyAnimationActive: 1
   onPointerDown:
     defaultState: 0
@@ -5441,6 +6504,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -5452,6 +6516,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -5464,6 +6529,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -5474,6 +6540,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -5499,6 +6566,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -5510,6 +6578,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -5522,6 +6591,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -5532,6 +6602,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -5557,6 +6628,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -5568,6 +6640,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -5580,6 +6653,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -5590,6 +6664,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -5600,7 +6675,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     isAnimating: 0
-    expanded: 0
+    expanded: 1
     isAnyAnimationActive: 1
   displayText: Settings
   button: {fileID: 1462970866}
@@ -6010,7 +7085,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1694928101
 GameObject:
@@ -6640,6 +7715,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824445017}
   m_CullTransparentMesh: 1
+--- !u!1 &1828571691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1828571692}
+  - component: {fileID: 1828571694}
+  - component: {fileID: 1828571693}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1828571692
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828571691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 849004285}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1828571693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828571691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Back
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1828571694
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828571691}
+  m_CullTransparentMesh: 0
 --- !u!1 &1868026742
 GameObject:
   m_ObjectHideFlags: 0
@@ -7102,6 +8311,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -7113,6 +8323,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -7125,6 +8336,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 1.1, y: 1.1, z: 1.1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -7135,6 +8347,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -7160,6 +8373,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -7171,6 +8385,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -7183,6 +8398,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1.1, y: 1.1, z: 1.1}
       to: {x: 1, y: 1, z: 1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -7193,6 +8409,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -7218,6 +8435,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -7229,6 +8447,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -7241,6 +8460,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -7251,6 +8471,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -7276,6 +8497,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -7287,6 +8509,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -7299,6 +8522,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -7309,6 +8533,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -7334,6 +8559,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -7345,6 +8571,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -7357,6 +8584,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -7367,6 +8595,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -7665,6 +8894,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -7676,6 +8906,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -7688,6 +8919,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 1.1, y: 1.1, z: 1.1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -7698,6 +8930,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -7723,6 +8956,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -7734,6 +8968,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -7746,6 +8981,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1.1, y: 1.1, z: 1.1}
       to: {x: 1, y: 1, z: 1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -7756,6 +8992,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -7781,6 +9018,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -7792,6 +9030,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -7804,6 +9043,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -7814,6 +9054,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -7839,6 +9080,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -7850,6 +9092,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -7862,6 +9105,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -7872,6 +9116,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -7897,6 +9142,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -7908,6 +9154,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -7920,6 +9167,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -7930,6 +9178,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -7991,7 +9240,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1441887928}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
-        m_MethodName: ShowPreviousPage
+        m_MethodName: GoBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8271,8 +9520,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: Settings
-  useCustomStartPosition: 1
-  customStartPosition: {x: 0, y: 0, z: 0}
   showData:
     defaultState: 1
     move: 0
@@ -8286,6 +9533,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 0.5
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 2000, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -8297,6 +9545,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.5
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 50}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -8309,6 +9558,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.3
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -8319,6 +9569,7 @@ MonoBehaviour:
       state: 1
       startDelay: 0
       duration: 0.3
+      initialValue: 1
       from: 0
       to: 1
       ease: 27
@@ -8344,6 +9595,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 0.3
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -8355,6 +9607,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -8367,6 +9620,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -8377,6 +9631,7 @@ MonoBehaviour:
       state: 2
       startDelay: 0
       duration: 0.3
+      initialValue: 1
       from: 1
       to: 0
       ease: 27
@@ -8389,6 +9644,8 @@ MonoBehaviour:
     isAnimating: 0
     expanded: 1
     isAnyAnimationActive: 1
+  useCustomStartPosition: 1
+  customStartPosition: {x: 0, y: 0, z: 0}
 --- !u!225 &2118101280
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8519,993 +9776,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120666406}
   m_CullTransparentMesh: 1
---- !u!222 &2935405012940644288
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405012940644291}
-  m_CullTransparentMesh: 0
---- !u!114 &2935405012940644289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405012940644291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.15686274, g: 0.5928205, b: 0.7372549, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!224 &2935405012940644290
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405012940644291}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2935405013949705269}
-  - {fileID: 2935405013045700144}
-  m_Father: {fileID: 2935405013027613625}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 1000}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2935405012940644291
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2935405012940644290}
-  - component: {fileID: 2935405012940644288}
-  - component: {fileID: 2935405012940644289}
-  m_Layer: 5
-  m_Name: BG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &2935405013027613621
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2935405013027613625}
-  - component: {fileID: 2935405013027613626}
-  - component: {fileID: 2935405013027613627}
-  - component: {fileID: 2935405013027613622}
-  m_Layer: 5
-  m_Name: Popup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2935405013027613622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013027613621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6557f74738b94b0ca53c48ae40c92cb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: Popup
-  useCustomStartPosition: 1
-  customStartPosition: {x: 0, y: 0, z: 0}
-  showData:
-    defaultState: 1
-    move: 0
-    rotation: 0
-    scale: 1
-    fade: 1
-    moveData:
-      state: 1
-      mode: 0
-      moveMode: 0
-      startDelay: 0
-      duration: 0.5
-      moveDirection: 0
-      from: {x: 0, y: 2000, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0, y: 0, z: 0}
-      elasticity: 1
-      vibrato: 12
-      ease: 19
-    rotationData:
-      state: 1
-      mode: 0
-      startDelay: 0
-      duration: 0.5
-      from: {x: 0, y: 0, z: 50}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0, y: 0, z: 0}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-      rotateMode: 1
-    scaleData:
-      state: 1
-      mode: 0
-      startDelay: 0
-      duration: 0.3
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 1, y: 1, z: 1}
-      by: {x: 0, y: 0, z: 0}
-      elasticity: 1
-      vibrato: 12
-      ease: 27
-    fadeData:
-      state: 1
-      startDelay: 0
-      duration: 0.3
-      from: 0
-      to: 1
-      ease: 27
-    onStarted:
-      m_PersistentCalls:
-        m_Calls: []
-    onCompleted:
-      m_PersistentCalls:
-        m_Calls: []
-    isAnimating: 0
-    expanded: 1
-    isAnyAnimationActive: 1
-  hideData:
-    defaultState: 2
-    move: 0
-    rotation: 0
-    scale: 1
-    fade: 1
-    moveData:
-      state: 2
-      mode: 0
-      moveMode: 0
-      startDelay: 0
-      duration: 1
-      moveDirection: 0
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0, y: 0, z: 0}
-      elasticity: 1
-      vibrato: 12
-      ease: 27
-    rotationData:
-      state: 2
-      mode: 0
-      startDelay: 0
-      duration: 1
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0, y: 0, z: 0}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-      rotateMode: 1
-    scaleData:
-      state: 2
-      mode: 0
-      startDelay: 0
-      duration: 0.3
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 1, y: 1, z: 1}
-      by: {x: 0, y: 0, z: 0}
-      elasticity: 1
-      vibrato: 12
-      ease: 27
-    fadeData:
-      state: 2
-      startDelay: 0
-      duration: 0.3
-      from: 1
-      to: 0
-      ease: 27
-    onStarted:
-      m_PersistentCalls:
-        m_Calls: []
-    onCompleted:
-      m_PersistentCalls:
-        m_Calls: []
-    isAnimating: 0
-    expanded: 1
-    isAnyAnimationActive: 1
---- !u!224 &2935405013027613625
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013027613621}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2935405012940644290}
-  m_Father: {fileID: 1441887932}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1453, y: 1833}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2935405013027613626
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013027613621}
-  m_CullTransparentMesh: 0
---- !u!225 &2935405013027613627
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013027613621}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!224 &2935405013045700144
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013045700145}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2935405013667959371}
-  m_Father: {fileID: 2935405012940644290}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 200}
-  m_SizeDelta: {x: 300, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2935405013045700145
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2935405013045700144}
-  - component: {fileID: 2935405013045700149}
-  - component: {fileID: 2935405013045700150}
-  - component: {fileID: 2935405013045700151}
-  - component: {fileID: 2935405013045700146}
-  - component: {fileID: 2935405013045700147}
-  m_Layer: 5
-  m_Name: BackButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2935405013045700146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013045700145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4172cca7996a90649a7cd818494fa801, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onPointerEnter:
-    defaultState: 0
-    move: 0
-    rotation: 0
-    scale: 1
-    fade: 0
-    moveData:
-      state: 0
-      mode: 1
-      moveMode: 0
-      startDelay: 0
-      duration: 1
-      moveDirection: 0
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 20, y: 0, z: 0}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-    rotationData:
-      state: 0
-      mode: 1
-      startDelay: 0
-      duration: 1
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0, y: 0, z: 45}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-      rotateMode: 1
-    scaleData:
-      state: 0
-      mode: 0
-      startDelay: 0
-      duration: 0.25
-      from: {x: 1, y: 1, z: 1}
-      to: {x: 1.1, y: 1.1, z: 1.1}
-      by: {x: 0.1, y: 0.1, z: 0.1}
-      elasticity: 1
-      vibrato: 12
-      ease: 18
-    fadeData:
-      state: 0
-      startDelay: 0
-      duration: 1
-      from: 0
-      to: 0
-      ease: 1
-    onStarted:
-      m_PersistentCalls:
-        m_Calls: []
-    onCompleted:
-      m_PersistentCalls:
-        m_Calls: []
-    isAnimating: 0
-    expanded: 1
-    isAnyAnimationActive: 1
-  onPointerExit:
-    defaultState: 0
-    move: 0
-    rotation: 0
-    scale: 1
-    fade: 0
-    moveData:
-      state: 0
-      mode: 1
-      moveMode: 0
-      startDelay: 0
-      duration: 1
-      moveDirection: 0
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 20, y: 0, z: 0}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-    rotationData:
-      state: 0
-      mode: 1
-      startDelay: 0
-      duration: 1
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0, y: 0, z: 45}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-      rotateMode: 1
-    scaleData:
-      state: 0
-      mode: 0
-      startDelay: 0
-      duration: 0.25
-      from: {x: 1.1, y: 1.1, z: 1.1}
-      to: {x: 1, y: 1, z: 1}
-      by: {x: 0.1, y: 0.1, z: 0.1}
-      elasticity: 1
-      vibrato: 12
-      ease: 18
-    fadeData:
-      state: 0
-      startDelay: 0
-      duration: 1
-      from: 0
-      to: 0
-      ease: 1
-    onStarted:
-      m_PersistentCalls:
-        m_Calls: []
-    onCompleted:
-      m_PersistentCalls:
-        m_Calls: []
-    isAnimating: 0
-    expanded: 1
-    isAnyAnimationActive: 1
-  onPointerDown:
-    defaultState: 0
-    move: 0
-    rotation: 0
-    scale: 0
-    fade: 0
-    moveData:
-      state: 0
-      mode: 1
-      moveMode: 0
-      startDelay: 0
-      duration: 1
-      moveDirection: 0
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 100, y: 0, z: 0}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-    rotationData:
-      state: 0
-      mode: 1
-      startDelay: 0
-      duration: 1
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0, y: 0, z: 45}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-      rotateMode: 1
-    scaleData:
-      state: 0
-      mode: 1
-      startDelay: 0
-      duration: 1
-      from: {x: 1, y: 1, z: 1}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0.1, y: 0.1, z: 0.1}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-    fadeData:
-      state: 0
-      startDelay: 0
-      duration: 1
-      from: 0
-      to: 0
-      ease: 1
-    onStarted:
-      m_PersistentCalls:
-        m_Calls: []
-    onCompleted:
-      m_PersistentCalls:
-        m_Calls: []
-    isAnimating: 0
-    expanded: 0
-    isAnyAnimationActive: 0
-  onPointerUp:
-    defaultState: 0
-    move: 0
-    rotation: 0
-    scale: 0
-    fade: 0
-    moveData:
-      state: 0
-      mode: 1
-      moveMode: 0
-      startDelay: 0
-      duration: 1
-      moveDirection: 0
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 100, y: 0, z: 0}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-    rotationData:
-      state: 0
-      mode: 1
-      startDelay: 0
-      duration: 1
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0, y: 0, z: 45}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-      rotateMode: 1
-    scaleData:
-      state: 0
-      mode: 1
-      startDelay: 0
-      duration: 1
-      from: {x: 1, y: 1, z: 1}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0.1, y: 0.1, z: 0.1}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-    fadeData:
-      state: 0
-      startDelay: 0
-      duration: 1
-      from: 0
-      to: 0
-      ease: 1
-    onStarted:
-      m_PersistentCalls:
-        m_Calls: []
-    onCompleted:
-      m_PersistentCalls:
-        m_Calls: []
-    isAnimating: 0
-    expanded: 0
-    isAnyAnimationActive: 0
-  onClick:
-    defaultState: 0
-    move: 0
-    rotation: 0
-    scale: 1
-    fade: 0
-    moveData:
-      state: 0
-      mode: 1
-      moveMode: 0
-      startDelay: 0
-      duration: 1
-      moveDirection: 0
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 100, y: 0, z: 0}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-    rotationData:
-      state: 0
-      mode: 1
-      startDelay: 0
-      duration: 1
-      from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0, y: 0, z: 45}
-      elasticity: 1
-      vibrato: 12
-      ease: 1
-      rotateMode: 1
-    scaleData:
-      state: 0
-      mode: 1
-      startDelay: 0
-      duration: 0.25
-      from: {x: 1, y: 1, z: 1}
-      to: {x: 0, y: 0, z: 0}
-      by: {x: 0.1, y: 0.1, z: 0.1}
-      elasticity: 1
-      vibrato: 5
-      ease: 25
-    fadeData:
-      state: 0
-      startDelay: 0
-      duration: 1
-      from: 0
-      to: 0
-      ease: 1
-    onStarted:
-      m_PersistentCalls:
-        m_Calls: []
-    onCompleted:
-      m_PersistentCalls:
-        m_Calls: []
-    isAnimating: 0
-    expanded: 1
-    isAnyAnimationActive: 1
-  displayText: Back
-  button: {fileID: 0}
-  textLabel: {fileID: 2935405013667959370}
---- !u!225 &2935405013045700147
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013045700145}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!222 &2935405013045700149
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013045700145}
-  m_CullTransparentMesh: 0
---- !u!114 &2935405013045700150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013045700145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &2935405013045700151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013045700145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 2935405013045700150}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1441887928}
-        m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
-        m_MethodName: ShowPreviousPage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!1 &2935405013667959364
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2935405013667959371}
-  - component: {fileID: 2935405013667959369}
-  - component: {fileID: 2935405013667959370}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!222 &2935405013667959369
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013667959364}
-  m_CullTransparentMesh: 0
---- !u!114 &2935405013667959370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013667959364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Back
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 1
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!224 &2935405013667959371
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013667959364}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2935405013045700144}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2935405013949705268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013949705270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Popup
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 1
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!224 &2935405013949705269
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013949705270}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2935405012940644290}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -150}
-  m_SizeDelta: {x: 0, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2935405013949705270
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2935405013949705269}
-  - component: {fileID: 2935405013949705275}
-  - component: {fileID: 2935405013949705268}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!222 &2935405013949705275
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935405013949705270}
-  m_CullTransparentMesh: 0
 --- !u!224 &5632294918476354448
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9763,7 +10033,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1441887928}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
-        m_MethodName: ShowPreviousPage
+        m_MethodName: GoBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9877,6 +10147,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -9888,6 +10159,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -9900,6 +10172,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 1.1, y: 1.1, z: 1.1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -9910,6 +10183,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -9935,6 +10209,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 20, y: 0, z: 0}
@@ -9946,6 +10221,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -9958,6 +10234,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1.1, y: 1.1, z: 1.1}
       to: {x: 1, y: 1, z: 1}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -9968,6 +10245,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -9993,6 +10271,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -10004,6 +10283,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -10016,6 +10296,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -10026,6 +10307,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -10051,6 +10333,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -10062,6 +10345,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -10074,6 +10358,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -10084,6 +10369,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -10109,6 +10395,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 1
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 100, y: 0, z: 0}
@@ -10120,6 +10407,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 45}
@@ -10132,6 +10420,7 @@ MonoBehaviour:
       mode: 1
       startDelay: 0
       duration: 0.25
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 1, y: 1, z: 1}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0.1, y: 0.1, z: 0.1}
@@ -10142,6 +10431,7 @@ MonoBehaviour:
       state: 0
       startDelay: 0
       duration: 1
+      initialValue: 1
       from: 0
       to: 0
       ease: 1
@@ -10328,7 +10618,7 @@ RectTransform:
   m_Children:
   - {fileID: 5632294918971360870}
   m_Father: {fileID: 1441887932}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10375,8 +10665,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: Shop
-  useCustomStartPosition: 1
-  customStartPosition: {x: 0, y: 0, z: 0}
   showData:
     defaultState: 1
     move: 0
@@ -10390,6 +10678,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 0.5
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 2000, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -10401,6 +10690,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.5
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 50}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -10413,6 +10703,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 0.3
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -10423,6 +10714,7 @@ MonoBehaviour:
       state: 1
       startDelay: 0
       duration: 0.3
+      initialValue: 1
       from: 0
       to: 1
       ease: 27
@@ -10448,6 +10740,7 @@ MonoBehaviour:
       startDelay: 0
       duration: 0.3
       moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -10459,6 +10752,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -10471,6 +10765,7 @@ MonoBehaviour:
       mode: 0
       startDelay: 0
       duration: 1
+      initialValue: {x: 1, y: 1, z: 1}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
       by: {x: 0, y: 0, z: 0}
@@ -10481,6 +10776,7 @@ MonoBehaviour:
       state: 2
       startDelay: 0
       duration: 0.3
+      initialValue: 1
       from: 1
       to: 0
       ease: 27
@@ -10493,3 +10789,5 @@ MonoBehaviour:
     isAnimating: 0
     expanded: 1
     isAnyAnimationActive: 1
+  useCustomStartPosition: 1
+  customStartPosition: {x: 0, y: 0, z: 0}

@@ -12,28 +12,25 @@ namespace EZUI
 		protected CanvasGroup canvasGroup;
 		protected RectTransform rectTransform;
 		
-		private float _originalAlpha = 1.0f;
-		
-		public abstract bool UseCustomStartPosition(out Vector3 customPosition);
+		protected abstract bool UseCustomStartPosition(out Vector3 customPosition);
+		protected abstract void SetInitialState();
 		
 		protected virtual void Awake()
 		{
 			Init();
 		}
 		
-		public virtual void Init()
+		protected virtual void Init()
 		{
 			rectTransform = GetComponent<RectTransform>();
 			canvasGroup = GetComponent<CanvasGroup>();
 			
-			_originalAlpha = canvasGroup.alpha;
+			SetInitialState();
 		}
 		
-		public virtual Tween StartTransition(AnimationData animationData, bool immidiate = false, Action callback = null)
+		protected virtual Tween StartTransition(AnimationData animationData, bool immidiate = false, Action callback = null)
 		{
 			animationData.isAnimating = true;
-			
-			canvasGroup.alpha = _originalAlpha;
 			
 			animationData.onStarted?.Invoke();
 			

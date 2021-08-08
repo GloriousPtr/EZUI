@@ -5,8 +5,8 @@ using EZUI;
 namespace EZUI_Editor
 {
 	[CanEditMultipleObjects]
-	[CustomEditor(typeof(EZUIPanel))]
-	public class EZUIPanelEditor : EZUIEditorBase
+	[CustomEditor(typeof(EZUIPopup))]
+	public class EZUIPopupEditor : EZUIEditorBase
 	{
 		private static Color _defaultColor;
 
@@ -14,8 +14,6 @@ namespace EZUI_Editor
 		private static AnimBoolGroup _hideAnimBoolsGroup;
 
 		private SerializedProperty key;
-		private SerializedProperty useCustomStartPosition;
-		private SerializedProperty customStartPosition;
 		private SerializedProperty showData;
 		private SerializedProperty hideData;
 
@@ -32,8 +30,6 @@ namespace EZUI_Editor
 		private void Init()
 		{
 			key = serializedObject.FindProperty("key");
-			useCustomStartPosition = serializedObject.FindProperty("useCustomStartPosition");
-			customStartPosition = serializedObject.FindProperty("customStartPosition");
 			showData = serializedObject.FindProperty("showData");
 			hideData = serializedObject.FindProperty("hideData");
 		}
@@ -42,7 +38,7 @@ namespace EZUI_Editor
 		{
 			serializedObject.UpdateIfRequiredOrScript();
 			
-			EZUIPanel panel = (EZUIPanel) target;
+			EZUIPopup popup = (EZUIPopup) target;
 			bool previewEnabled = targets.Length == 1;
 			_defaultColor = GUI.backgroundColor;
 			
@@ -59,25 +55,8 @@ namespace EZUI_Editor
 			
 			EditorGUILayout.Space(20);
 			
-			EditorGUILayout.BeginHorizontal();
-			useCustomStartPosition.boolValue = EditorGUILayout.Toggle(useCustomStartPosition.boolValue, GUILayout.Width(20));
-			EditorGUILayout.LabelField("Custom Start Position", GUILayout.Width(135));
-			EditorGUILayout.PropertyField(customStartPosition, GUIContent.none);
-			EditorGUILayout.EndHorizontal();
-			
-			EditorGUILayout.BeginHorizontal();
-			if (GUILayout.Button("Get Position", GUILayout.Height(25)))
-				customStartPosition.vector3Value = panel.transform.localPosition;
-			if (GUILayout.Button("Set Position", GUILayout.Height(25)))
-				panel.transform.localPosition = customStartPosition.vector3Value;
-			if (GUILayout.Button("Reset Position", GUILayout.Height(25)))
-				customStartPosition.vector3Value = StaticData.ZeroVector;
-			EditorGUILayout.EndHorizontal();
-			
-			EditorGUILayout.Space(20);
-			
-			DrawAnimationData("Show Panel", previewEnabled, panel, showData, _showAnimBoolsGroup);
-			DrawAnimationData("Hide Panel", previewEnabled, panel, hideData, _hideAnimBoolsGroup);
+			DrawAnimationData("Show Panel", previewEnabled, popup, showData, _showAnimBoolsGroup);
+			DrawAnimationData("Hide Panel", previewEnabled, popup, hideData, _hideAnimBoolsGroup);
 			
 			GUI.backgroundColor = _defaultColor;
 			

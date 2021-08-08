@@ -1,4 +1,5 @@
-﻿using DG.DOTweenEditor;
+﻿using System.Reflection;
+using DG.DOTweenEditor;
 using DG.Tweening;
 using EZUI.Animation;
 using UnityEngine;
@@ -17,7 +18,21 @@ namespace EZUI_Editor
 			
 			_previewing = true;
 			
-			ezuiBase.Init();
+			System.Type type = ezuiBase.GetType();
+			
+			// Call ezuiBase.Init()
+			MethodInfo initMethod;
+			{
+				initMethod = type.GetMethod("Init", BindingFlags.NonPublic | BindingFlags.Instance);
+				if (initMethod == null)
+				{
+					Debug.LogError("Couldn't find method Init in EZUIBase class");
+					_previewing = false;
+					return;
+				}
+			}
+			initMethod.Invoke(ezuiBase, null);
+
 			Transform transform = ezuiBase.transform;
 			
 			ezuiBase.gameObject.SetActive(true);
@@ -27,10 +42,24 @@ namespace EZUI_Editor
 			Vector3 localScale = transform.localScale;
 			float alpha = ezuiBase.GetComponent<CanvasGroup>().alpha;
 			
-			Tween tween = ezuiBase.StartTransition(animationData);
+			// Call ezuiBase.StartTransition(animationData, false, null);
+			MethodInfo transitionMethod;
+			{
+				transitionMethod = type.GetMethod("StartTransition",
+					BindingFlags.NonPublic | BindingFlags.Instance);
+				
+				if (transitionMethod == null)
+				{
+					Debug.LogError("Couldn't find method StartTransition in EZUIBase class");
+					_previewing = false;
+					return;
+				}
+			}
+			Tween tween = (Tween) transitionMethod.Invoke(ezuiBase, new object[]{ animationData, false, null });
 			
 			Sequence previewSequence = DOTween.Sequence();
-			previewSequence.Join(tween);
+			previewSequence.AppendInterval(0.5f);
+			previewSequence.Append(tween);
 			previewSequence.AppendInterval(0.5f);
 			previewSequence.AppendCallback(() =>
 			{
