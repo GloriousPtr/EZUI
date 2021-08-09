@@ -33,7 +33,8 @@ namespace EZUIEditor
 
 			if (duplicatesExist)
 			{
-				EditorGUILayout.HelpBox("Duplicates exists in panels!", MessageType.Error, true);
+				EditorGUILayout.HelpBox("Duplicates exists in panels, remove the duplicates or change the key",
+					MessageType.Error, true);
 				return;
 			}
 
@@ -48,8 +49,10 @@ namespace EZUIEditor
 			EditorGUILayout.EndHorizontal();
 			
 			List<EZUIData.Page> pages = (List<EZUIData.Page>) EditorUtils.GetTargetObjectOfProperty(pagesProperty);
-			foreach (EZUIData.Page page in pages)
+			bool foundDuplicate = false;
+			for (int i = 0; i < pages.Count; i++)
 			{
+				EZUIData.Page page = pages[i];
 				EditorGUILayout.BeginHorizontal();
 				if (GUILayout.Button("X", GUILayout.Width(20)))
 				{
@@ -57,6 +60,10 @@ namespace EZUIEditor
 					break;
 				}
 
+				List<EZUIData.Page> duplicateKeys = pages.FindAll(x => x.key == page.key);
+				duplicatesExist = duplicateKeys.Count > 1;
+
+				GUI.enabled = !duplicatesExist;
 				if (GUILayout.Button("Edit", GUILayout.Width(50)))
 				{
 					if (edit == page)
@@ -65,8 +72,17 @@ namespace EZUIEditor
 						edit = page;
 				}
 
+				GUI.enabled = true;
+
+				if (duplicatesExist)
+				{
+					foundDuplicate = true;
+					GUI.color = Color.red;
+				}
 				page.key = EditorGUILayout.TextField(page.key, GUILayout.Width(200));
-				
+				GUI.color = EZUIEditorBase.DefaultColor;
+
+				GUI.enabled = !duplicatesExist;
 				EZUIData.Page defaultGroup = pages.Find(x => x.defaultPage);
 
 				if (defaultGroup == null)
@@ -93,6 +109,8 @@ namespace EZUIEditor
 					defaultGroup = page;
 					page.defaultPage = true;
 				}
+
+				GUI.enabled = true;
 
 				EditorGUILayout.EndHorizontal();
 
@@ -150,10 +168,10 @@ namespace EZUIEditor
 					{
 						if (string.IsNullOrEmpty(panel))
 							continue;
-						
+
 						if (mask.ContainsKey(panel))
 							continue;
-						
+
 						mask.Add(panel, -1);
 						if (page.showingPanels.Contains(panel))
 							mask[panel] = 1;
@@ -165,7 +183,7 @@ namespace EZUIEditor
 					{
 						if (string.IsNullOrEmpty(panel))
 							continue;
-						
+
 						EditorGUILayout.BeginHorizontal();
 						switch (mask[panel])
 						{
@@ -183,7 +201,7 @@ namespace EZUIEditor
 						EditorGUILayout.Space();
 
 						EditorGUILayout.LabelField(panel, GUILayout.Width(150));
-						GUI.color = EZUIPanelEditor.DefaultColor;
+						GUI.color = EZUIEditorBase.DefaultColor;
 
 						if (EditorGUILayout.Toggle(mask[panel] == 1, GUILayout.Width(90)))
 							mask[panel] = 1;
@@ -214,11 +232,20 @@ namespace EZUIEditor
 				}
 			}
 
+			GUI.enabled = !foundDuplicate;
 			if (GUILayout.Button("Add", GUILayout.Width(60)))
 				pages.Add(new EZUIData.Page());
+			GUI.enabled = true;
 
 			EditorGUILayout.EndVertical();
 
+			if (foundDuplicate)
+			{
+				EditorGUILayout.HelpBox("Duplicates exists in pages, remove the duplicates or change the key",
+					MessageType.Error, true);
+				return;
+			}
+			
 			#endregion
 			
 			serializedObject.ApplyModifiedProperties();

@@ -33,7 +33,7 @@ MonoBehaviour:
     - Stats
     ignoringPanels: []
     defaultPage: 0
-  defaultPage:
+  getDefaultPage:
     key: 
     showingPanels: []
     ignoringPanels: []
