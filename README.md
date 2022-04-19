@@ -3,8 +3,9 @@
 </h1>
 
 <p align="center">
-  <a href=""><img alt="platforms" src="https://img.shields.io/badge/platform-Unity-blue?style=flat-square"/></a>
+  <img alt="platforms" src="https://img.shields.io/badge/platform-Unity-blue?style=flat-square"/>
   <img alt="GitHub" src="https://img.shields.io/github/license/MohitSethi99/EZUI?color=blue&style=flat-square">
+  <img alt="size" src="https://img.shields.io/github/repo-size/MohitSethi99/EZUI?style=flat-square"/>
   <br/>
 </p>
 
