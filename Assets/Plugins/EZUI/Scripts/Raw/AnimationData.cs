@@ -188,5 +188,4 @@ namespace EZUI.Animation
 #endif
 		}
 	}
-
 }

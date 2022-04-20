@@ -38,56 +38,54 @@ namespace EZUI.Animation
 				case MoveDirection.Left:
 					position.x = rectTransform.position.x - rect.width;
 					position.y = rectTransform.anchoredPosition.y;
-					break;
+					return position;
 				case MoveDirection.Right:
 					position.x = rectTransform.position.x + rect.width;
 					position.y = rectTransform.anchoredPosition.y;
-					break;
+					return position;
 				case MoveDirection.Top:
 					position.x = rectTransform.anchoredPosition.x;
 					position.y = rectTransform.position.y + rect.height;
-					break;
+					return position;
 				case MoveDirection.Bottom:
 					position.x = rectTransform.anchoredPosition.x;
 					position.y = rectTransform.position.y - rect.height;
-					break;
+					return position;
 				case MoveDirection.TopLeft:
 					position.x = rectTransform.position.x - rect.width;
 					position.y = rectTransform.position.y + rect.height;
-					break;
+					return position;
 				case MoveDirection.TopCentre:
 					position.y = rectTransform.position.y + rect.height;
-					break;
+					return position;
 				case MoveDirection.TopRight:
 					position.x = rectTransform.position.x + rect.width;
 					position.y = rectTransform.position.y + rect.height;
-					break;
+					return position;
 				case MoveDirection.MiddleLeft:
 					position.x = rectTransform.position.x - rect.width;
-					break;
+					return position;
 				case MoveDirection.MiddleCentre:
-					break;
+					return position;
 				case MoveDirection.MiddleRight:
 					position.x = rectTransform.position.x + rect.width;
-					break;
+					return position;
 				case MoveDirection.BottomLeft:
 					position.x = rectTransform.position.x - rect.width;
 					position.y = rectTransform.position.y - rect.height;
-					break;
+					return position;
 				case MoveDirection.BottomCentre:
 					position.y = rectTransform.position.y - rect.height;
-					break;
+					return position;
 				case MoveDirection.BottomRight:
 					position.x = rectTransform.position.x + rect.width;
 					position.y = rectTransform.position.y - rect.height;
-					break;
+					return position;
 				case MoveDirection.CustomPosition:
-					break;
+					return position;
 				default:
 					throw new ArgumentOutOfRangeException(nameof(moveDirection), moveDirection, null);
 			}
-			
-			return position;
 		}
 	}
 }

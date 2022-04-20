@@ -163,7 +163,6 @@ namespace EZUIEditor
 
 					EditorGUILayout.EndHorizontal();
 
-
 					foreach (string panel in data.panels)
 					{
 						if (string.IsNullOrEmpty(panel))

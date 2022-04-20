@@ -3,31 +3,10 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.AnimatedValues;
 using EZUI.Animation;
-using UnityEngine.Events;
 using EZUI;
 
 namespace EZUI_Editor
 {
-	public class AnimBoolGroup
-	{
-		public AnimBool expanded = new AnimBool(false);
-		public AnimBool move = new AnimBool(false);
-		public AnimBool rotate = new AnimBool(false);
-		public AnimBool scale = new AnimBool(false);
-		public AnimBool fade = new AnimBool(false);
-		public AnimBool events = new AnimBool(false);
-
-		public AnimBoolGroup(UnityAction repaint)
-		{
-			expanded.valueChanged.AddListener(repaint);
-			move.valueChanged.AddListener(repaint);
-			rotate.valueChanged.AddListener(repaint);
-			scale.valueChanged.AddListener(repaint);
-			fade.valueChanged.AddListener(repaint);
-			events.valueChanged.AddListener(repaint);
-		}
-	}
-
 	public class EZUIEditorBase : Editor
 	{
 		public static readonly Color DefaultColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
