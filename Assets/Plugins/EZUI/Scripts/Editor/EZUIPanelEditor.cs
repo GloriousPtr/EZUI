@@ -8,7 +8,7 @@ namespace EZUI_Editor
 {
 	[CanEditMultipleObjects]
 	[CustomEditor(typeof(EZUIPanel))]
-	public class EZUIPanelEditor : EZUIEditorBase
+	internal class EZUIPanelEditor : EZUIEditorBase
 	{
 		private static Color _defaultColor;
 

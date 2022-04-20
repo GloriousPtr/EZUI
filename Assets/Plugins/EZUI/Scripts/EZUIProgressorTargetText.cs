@@ -1,6 +1,8 @@
 ﻿using TMPro;
 using UnityEngine;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI
 {
 	public class EZUIProgressorTargetText : EZUIProgressorTarget
@@ -10,7 +12,7 @@ namespace EZUI
 		[SerializeField] private string prefix;
 		[SerializeField] private string suffix = "%";
 		
-		public override void SetValue(EZUIProgressor progressor)
+		internal override void SetValue(EZUIProgressor progressor)
 		{
 			float value = useProgress
 				? progressor.CurrentProgress

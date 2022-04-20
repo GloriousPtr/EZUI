@@ -6,7 +6,7 @@ namespace EZUI_Editor
 {
 	[CanEditMultipleObjects]
 	[CustomEditor(typeof(EZUIPopup))]
-	public class EZUIPopupEditor : EZUIEditorBase
+	internal class EZUIPopupEditor : EZUIEditorBase
 	{
 		private static Color _defaultColor;
 

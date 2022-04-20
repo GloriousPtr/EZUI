@@ -1,30 +1,32 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI.Animation
 {
-	public enum MoveMode { Anchored, Local }
+	internal enum MoveMode { Anchored, Local }
 	
 	[System.Serializable]
-	public struct MoveData
+	internal struct MoveData
 	{
-		public State state;
-		public Mode mode;
-		public MoveMode moveMode;
+		[SerializeField] internal State state;
+		[SerializeField] internal Mode mode;
+		[SerializeField] internal MoveMode moveMode;
 		
-		public float startDelay;
-		public float duration;
-		public MoveDirection moveDirection;
-		public Vector3 initialValue;
-		public Vector3 from;
-		public Vector3 to;
-		public Vector3 by;
-		public float elasticity;
-		public int vibrato;
-		public Ease ease;
+		[SerializeField] internal float startDelay;
+		[SerializeField] internal float duration;
+		[SerializeField] internal MoveDirection moveDirection;
+		[SerializeField] internal Vector3 initialValue;
+		[SerializeField] internal Vector3 from;
+		[SerializeField] internal Vector3 to;
+		[SerializeField] internal Vector3 by;
+		[SerializeField] internal float elasticity;
+		[SerializeField] internal int vibrato;
+		[SerializeField] internal Ease ease;
 		
-		public MoveData(State state, Mode mode)
+		internal MoveData(State state, Mode mode)
 		{
 			this.state = state;
 			this.mode = mode;
@@ -44,23 +46,23 @@ namespace EZUI.Animation
 	}
 
 	[System.Serializable]
-	public struct RotationData
+	internal struct RotationData
 	{
-		public State state;
-		public Mode mode;
+		[SerializeField] internal State state;
+		[SerializeField] internal Mode mode;
 		
-		public float startDelay;
-		public float duration;
-		public Vector3 initialValue;
-		public Vector3 from;
-		public Vector3 to;
-		public Vector3 by;
-		public float elasticity;
-		public int vibrato;
-		public Ease ease;
-		public RotateMode rotateMode;
+		[SerializeField] internal float startDelay;
+		[SerializeField] internal float duration;
+		[SerializeField] internal Vector3 initialValue;
+		[SerializeField] internal Vector3 from;
+		[SerializeField] internal Vector3 to;
+		[SerializeField] internal Vector3 by;
+		[SerializeField] internal float elasticity;
+		[SerializeField] internal int vibrato;
+		[SerializeField] internal Ease ease;
+		[SerializeField] internal RotateMode rotateMode;
 
-		public RotationData(State state, Mode mode)
+		internal RotationData(State state, Mode mode)
 		{
 			this.state = state;
 			this.mode = mode;
@@ -79,22 +81,22 @@ namespace EZUI.Animation
 	}
 	
 	[System.Serializable]
-	public struct ScaleData
+	internal struct ScaleData
 	{
-		public State state;
-		public Mode mode;
+		[SerializeField] internal State state;
+		[SerializeField] internal Mode mode;
 
-		public float startDelay;
-		public float duration;
-		public Vector3 initialValue;
-		public Vector3 from;
-		public Vector3 to;
-		public Vector3 by;
-		public float elasticity;
-		public int vibrato;
-		public Ease ease;
+		[SerializeField] internal float startDelay;
+		[SerializeField] internal float duration;
+		[SerializeField] internal Vector3 initialValue;
+		[SerializeField] internal Vector3 from;
+		[SerializeField] internal Vector3 to;
+		[SerializeField] internal Vector3 by;
+		[SerializeField] internal float elasticity;
+		[SerializeField] internal int vibrato;
+		[SerializeField] internal Ease ease;
 
-		public ScaleData(State state, Mode mode)
+		internal ScaleData(State state, Mode mode)
 		{
 			this.state = state;
 			this.mode = mode;
@@ -112,18 +114,18 @@ namespace EZUI.Animation
 	}
 	
 	[System.Serializable]
-	public struct FloatData
+	internal struct FloatData
 	{
-		public State state;
+		[SerializeField] internal State state;
 		
-		public float startDelay;
-		public float duration;
-		public float initialValue;
-		public float from;
-		public float to;
-		public Ease ease;
+		[SerializeField] internal float startDelay;
+		[SerializeField] internal float duration;
+		[SerializeField] internal float initialValue;
+		[SerializeField] internal float from;
+		[SerializeField] internal float to;
+		[SerializeField] internal Ease ease;
 		
-		public FloatData(State state)
+		internal FloatData(State state)
 		{
 			this.state = state;
 
@@ -142,25 +144,25 @@ namespace EZUI.Animation
 	[System.Serializable]
 	public class AnimationData
 	{
-		public State defaultState;
+		[SerializeField] internal State defaultState;
 		
-		public bool move;
-		public bool rotation;
-		public bool scale;
-		public bool fade;
-		public MoveData moveData;
-		public RotationData rotationData;
-		public ScaleData scaleData;
-		public FloatData fadeData;
+		[SerializeField] internal bool move;
+		[SerializeField] internal bool rotation;
+		[SerializeField] internal bool scale;
+		[SerializeField] internal bool fade;
+		[SerializeField] internal MoveData moveData;
+		[SerializeField] internal RotationData rotationData;
+		[SerializeField] internal ScaleData scaleData;
+		[SerializeField] internal FloatData fadeData;
 		
-		public UnityEvent onStarted;
-		public UnityEvent onCompleted;
+		[SerializeField] internal UnityEvent onStarted;
+		[SerializeField] internal UnityEvent onCompleted;
 
-		public bool isAnimating;
+		[SerializeField] internal bool isAnimating;
 
 #if UNITY_EDITOR
-		public bool expanded;
-		public bool isAnyAnimationActive;
+		[SerializeField] internal bool expanded;
+		[SerializeField] internal bool isAnyAnimationActive;
 #endif
 		
 		public AnimationData(State state, Mode mode)

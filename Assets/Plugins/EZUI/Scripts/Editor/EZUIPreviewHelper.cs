@@ -7,11 +7,11 @@ using EZUI;
 
 namespace EZUI_Editor
 {
-	public class EZUIPreviewHelper
+	internal static class EZUIPreviewHelper
 	{
 		private static bool _previewing = false;
 		
-		public static void Preview(EZUIBase ezuiBase, AnimationData animationData)
+		internal static void Preview(EZUIBase ezuiBase, AnimationData animationData)
 		{
 			if (_previewing)
 				return;
@@ -74,7 +74,7 @@ namespace EZUI_Editor
 			DOTweenEditorPreview.Start();
 		}
 
-		public static void ScrubProgressor(EZUIProgressor progressor, float value)
+		internal static void ScrubProgressor(EZUIProgressor progressor, float value)
 		{
 			Sequence previewSequence = DOTween.Sequence();
 			previewSequence.Join(progressor.EaseValue(value));
@@ -82,7 +82,7 @@ namespace EZUI_Editor
 			DOTweenEditorPreview.Start();
 		}
 
-		public static void SimulateProgressor(EZUIProgressor progressor, float value)
+		internal static void SimulateProgressor(EZUIProgressor progressor, float value)
 		{
 			if (_previewing)
 				return;

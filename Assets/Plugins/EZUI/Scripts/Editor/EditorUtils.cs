@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace EZUI_Editor
 {
-	public class EditorUtils
+	internal class EditorUtils
 	{
-		public static void DrawField(SerializedProperty serializedProperty, int labelWidth, string propertyName, string customName = null)
+		internal static void DrawField(SerializedProperty serializedProperty, int labelWidth, string propertyName, string customName = null)
 		{
 			SerializedProperty prop = serializedProperty.FindPropertyRelative(propertyName);
 			if (string.IsNullOrEmpty(customName))
@@ -18,7 +18,7 @@ namespace EZUI_Editor
 			EditorGUILayout.PropertyField(prop, labelWidth == 0 ? new GUIContent(customName) : GUIContent.none);
 		}
 		
-		public static void DrawField(SerializedObject serializedObject, int labelWidth, string propertyName, string customName = null)
+		internal static void DrawField(SerializedObject serializedObject, int labelWidth, string propertyName, string customName = null)
 		{
 			SerializedProperty prop = serializedObject.FindProperty(propertyName);
 			if (string.IsNullOrEmpty(customName))
@@ -30,7 +30,7 @@ namespace EZUI_Editor
 			EditorGUILayout.PropertyField(prop, labelWidth == 0 ? new GUIContent(customName) : GUIContent.none);
 		}
 
-		public static void BeginDrawFieldsHorizontal(SerializedProperty serializedProperty, bool autoEnd, int labelWidth, params string[] propNames)
+		internal static void BeginDrawFieldsHorizontal(SerializedProperty serializedProperty, bool autoEnd, int labelWidth, params string[] propNames)
 		{
 			EditorGUILayout.BeginHorizontal();
 			for (int i = 0; i < propNames.Length; i++)
@@ -50,7 +50,7 @@ namespace EZUI_Editor
 				EndDrawFieldsHorizontal();
 		}
 		
-		public static void BeginDrawFieldsHorizontal(SerializedObject serializedObject, bool autoEnd, int labelWidth, params string[] propNames)
+		internal static void BeginDrawFieldsHorizontal(SerializedObject serializedObject, bool autoEnd, int labelWidth, params string[] propNames)
 		{
 			EditorGUILayout.BeginHorizontal();
 			for (int i = 0; i < propNames.Length; i++)
@@ -70,13 +70,13 @@ namespace EZUI_Editor
 				EndDrawFieldsHorizontal();
 		}
 
-		public static void EndDrawFieldsHorizontal()
+		internal static void EndDrawFieldsHorizontal()
 		{
 			EditorGUILayout.EndHorizontal();
 			EditorGUILayout.Space(3);
 		}
 
-		public static void BeginDrawFieldsVertical(SerializedProperty serializedProperty, bool autoEnd, int labelWidth, params string[] propNames)
+		internal static void BeginDrawFieldsVertical(SerializedProperty serializedProperty, bool autoEnd, int labelWidth, params string[] propNames)
 		{
 			EditorGUILayout.BeginVertical();
 			for (int i = 0; i < propNames.Length; i++)
@@ -93,7 +93,7 @@ namespace EZUI_Editor
 				EditorGUILayout.EndVertical();
 		}
 		
-		public static void BeginDrawFieldsVertical(SerializedObject serializedObject, bool autoEnd, int labelWidth, params string[] propNames)
+		internal static void BeginDrawFieldsVertical(SerializedObject serializedObject, bool autoEnd, int labelWidth, params string[] propNames)
 		{
 			EditorGUILayout.BeginVertical();
 			for (int i = 0; i < propNames.Length; i++)
@@ -110,9 +110,9 @@ namespace EZUI_Editor
 				EditorGUILayout.EndVertical();
 		}
 
-		public static void EndDrawFieldsVertical() => EditorGUILayout.EndVertical();
+		internal static void EndDrawFieldsVertical() => EditorGUILayout.EndVertical();
 		
-		public static void InspectorWidth(float currentInspectorWidth, out float width)
+		internal static void InspectorWidth(float currentInspectorWidth, out float width)
 		{
 			width = currentInspectorWidth;
 			GUILayout.Label(GUIContent.none, GUILayout.ExpandWidth(true), GUILayout.Height(0));
@@ -121,7 +121,7 @@ namespace EZUI_Editor
 			if (lastRect.width > 1) width = lastRect.width;
 		}
 		
-		public static object GetTargetObjectOfProperty(SerializedProperty prop)
+		internal static object GetTargetObjectOfProperty(SerializedProperty prop)
 		{
 			if (prop == null) return null;
 

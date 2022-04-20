@@ -7,28 +7,28 @@ using EZUI;
 
 namespace EZUI_Editor
 {
-	public class EZUIEditorBase : Editor
+	internal class EZUIEditorBase : Editor
 	{
-		public static readonly Color DefaultColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-		
-		public static readonly Color ExpandColor = new Color(0.3f, 0.3f, 0.65f, 1.0f);
-		public static readonly Color MoveColor = new Color(0.26f, 0.74f, 0.19f, 1.0f);
-		public static readonly Color RotateColor = new Color(0.75f, 0.35f, 0.1f, 1.0f);
-		public static readonly Color ScaleColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
-		public static readonly Color FadeColor = new Color(0.5f, 0.15f, 0.5f, 1.0f);
+		internal static readonly Color DefaultColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
-		public static GUIStyle HeadingStyle;
+		internal static readonly Color ExpandColor = new Color(0.3f, 0.3f, 0.65f, 1.0f);
+		internal static readonly Color MoveColor = new Color(0.26f, 0.74f, 0.19f, 1.0f);
+		internal static readonly Color RotateColor = new Color(0.75f, 0.35f, 0.1f, 1.0f);
+		internal static readonly Color ScaleColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+		internal static readonly Color FadeColor = new Color(0.5f, 0.15f, 0.5f, 1.0f);
 
-		public const float RepaintTime = 0.016f;
-		public static float NextRepaintTime;
-		
-		public static string HeadingTemplate(string label, int size = 20)
+		internal static GUIStyle HeadingStyle;
+
+		private const float RepaintTime = 0.016f;
+		private static float NextRepaintTime;
+
+		protected static string HeadingTemplate(string label, int size = 20)
 		{
 			string color = EditorGUIUtility.isProSkin ? "#cccccc" : "#000000";
 			return $"<size={size}><color={color}><b>{label}</b></color></size>";
 		}
 
-		public static Color GetColor(Color color)
+		private static Color GetColor(Color color)
 		{
 			color.a = EditorGUIUtility.isProSkin ? color.a : color.a * 0.5f;
 			return color;
@@ -39,7 +39,7 @@ namespace EZUI_Editor
 			HeadingStyle = new GUIStyle() { richText = true };
 		}
 
-		public void DrawAnimationData(string label, bool previewEnabled, EZUIBase ezuiBase, SerializedProperty serializedProperty, AnimBoolGroup animBoolsGroup)
+		internal void DrawAnimationData(string label, bool previewEnabled, EZUIBase ezuiBase, SerializedProperty serializedProperty, AnimBoolGroup animBoolsGroup)
 		{
 			SerializedProperty expandedProperty = serializedProperty.FindPropertyRelative("expanded");
 			SerializedProperty isAnyAnimationActive = serializedProperty.FindPropertyRelative("isAnyAnimationActive");

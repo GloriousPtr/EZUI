@@ -2,11 +2,13 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Runtime.CompilerServices;
 
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI
 {
 	public class EZUIProgressor : MonoBehaviour
@@ -40,8 +42,8 @@ namespace EZUI
 		[SerializeField] private Ease ease = Ease.OutBack;
 		[SerializeField] private bool useWholeNumbers = true;
 		
-		public UnityEvent<float> OnPercentChanged;
-		public UnityEvent<float> OnValueChanged;
+		[SerializeField] internal UnityEvent<float> OnPercentChanged;
+		[SerializeField] internal UnityEvent<float> OnValueChanged;
 
 		private Tweener _tween;
 		private Sequence _sequence;
@@ -68,14 +70,14 @@ namespace EZUI
 			KillSequence();
 		}
 
-		public void SetForcePercent(float percent)
+		internal void SetForcePercent(float percent)
 		{
 			percent = Mathf.Clamp01(percent);
 			OnPercentChanged?.Invoke(percent);
 			UpdateTargets(Mathf.Lerp(minValue, maxValue, percent));
 		}
 		
-		public void SetForceValue(float value)
+		internal void SetForceValue(float value)
 		{
 			value = Mathf.Clamp(value, minValue, maxValue);
 			OnValueChanged?.Invoke(value);
@@ -94,7 +96,7 @@ namespace EZUI
 			EaseValue(value);
 		}
 		
-		public Sequence EaseValue(float value)
+		internal Sequence EaseValue(float value)
 		{
 			if (_animating && _sequence != null)
 			{

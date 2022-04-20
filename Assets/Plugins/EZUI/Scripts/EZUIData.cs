@@ -1,18 +1,21 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI
 {
 	[CreateAssetMenu(fileName = "EZUIData", menuName = "EZUI/EZUIData", order = 0)]
 	public class EZUIData : ScriptableObject
 	{
 		[SerializeField] private List<Page> pages = new List<Page>();
-		[SerializeField] private Page getDefaultPage;
+		[SerializeField] private Page defaultPage;
 		
-		public List<string> panels = new List<string>();
-		public Dictionary<string, Page> pagesDictionary = new Dictionary<string, Page>();
+		[SerializeField] internal List<string> panels = new List<string>();
 		
-		public Page GetDefaultPage() => getDefaultPage;
+		internal Dictionary<string, Page> pagesDictionary = new Dictionary<string, Page>();
+		
+		public Page GetDefaultPage() => defaultPage;
 		
 		internal void Init()
 		{
@@ -20,7 +23,7 @@ namespace EZUI
 			{
 				Page page = pages[i];
 				if (page.defaultPage)
-					getDefaultPage = page;
+					defaultPage = page;
 				
 				pagesDictionary.Add(page.key, page);
 			}

@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI
 {
 	public class ProgressorGroup : MonoBehaviour
 	{
 		[SerializeField] private EZUIProgressor[] progressors;
 
-		public UnityEvent<float> OnProgressChanged;
+		[SerializeField] private UnityEvent<float> OnProgressChanged;
 
 		private void OnEnable()
 		{
@@ -26,9 +28,9 @@ namespace EZUI
 		private void Refresh(float percent)
 		{
 			float sum = 0;
-			
-			foreach (EZUIProgressor progressor in progressors)
-				sum += progressor.CurrentPercent;
+
+			for (int i = 0; i < progressors.Length; i++)
+				sum += progressors[i].CurrentPercent;
 
 			sum /= progressors.Length;
 			OnProgressChanged?.Invoke(sum);

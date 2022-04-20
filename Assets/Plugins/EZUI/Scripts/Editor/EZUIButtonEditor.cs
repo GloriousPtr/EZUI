@@ -7,7 +7,7 @@ namespace EZUI_Editor
 {
 	[CanEditMultipleObjects]
 	[CustomEditor(typeof(EZUIButton))]
-	public class EZUIButtonEditor : EZUIEditorBase
+	internal class EZUIButtonEditor : EZUIEditorBase
 	{
 		private static Color _defaultColor;
 		

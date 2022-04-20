@@ -7,7 +7,7 @@ using UnityEngine;
 namespace EZUIEditor
 {
 	[CustomEditor(typeof(EZUIData))]
-	public class EZUIDataEditor : Editor
+	internal class EZUIDataEditor : Editor
 	{
 		private SerializedProperty pagesProperty;
 		private EZUIData.Page edit;

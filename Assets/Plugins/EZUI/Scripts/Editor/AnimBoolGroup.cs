@@ -3,16 +3,16 @@ using UnityEngine.Events;
 
 namespace EZUI_Editor
 {
-	public class AnimBoolGroup
+	internal class AnimBoolGroup
 	{
-		public AnimBool expanded = new AnimBool(false);
-		public AnimBool move = new AnimBool(false);
-		public AnimBool rotate = new AnimBool(false);
-		public AnimBool scale = new AnimBool(false);
-		public AnimBool fade = new AnimBool(false);
-		public AnimBool events = new AnimBool(false);
+		internal AnimBool expanded = new AnimBool(false);
+		internal AnimBool move = new AnimBool(false);
+		internal AnimBool rotate = new AnimBool(false);
+		internal AnimBool scale = new AnimBool(false);
+		internal AnimBool fade = new AnimBool(false);
+		internal AnimBool events = new AnimBool(false);
 
-		public AnimBoolGroup(UnityAction repaint)
+		internal AnimBoolGroup(UnityAction repaint)
 		{
 			expanded.valueChanged.AddListener(repaint);
 			move.valueChanged.AddListener(repaint);

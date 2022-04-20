@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI
 {
 	public class EZUIManager : MonoBehaviour
@@ -22,8 +24,8 @@ namespace EZUI
 		public event Action ShouldQuit;
 		
 		public string CurrentPage { get; private set; }
-
-		public static EZUIData Data
+		
+		internal static EZUIData Data
 		{
 			get
 			{
@@ -232,7 +234,7 @@ namespace EZUI
 			HideAll(immediate);
 		}
 		
-		public void HideAll(bool immediate)
+		private void HideAll(bool immediate)
 		{
 			foreach (EZUIPanel panel in panels)
 				panel.SetVisible(false, immediate);

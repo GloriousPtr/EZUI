@@ -3,7 +3,9 @@ using UnityEngine.UI;
 using EZUI.Animation;
 using TMPro;
 using UnityEngine.EventSystems;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI
 {
 	[RequireComponent(typeof(Button))]
@@ -18,7 +20,7 @@ namespace EZUI
 		[SerializeField] private string displayText;
 		[SerializeField] private Button button;
 		
-		public TextMeshProUGUI textLabel;
+		[SerializeField] internal TextMeshProUGUI textLabel;
 		
 		private void Start()
 		{
@@ -68,7 +70,7 @@ namespace EZUI
 				StartTransition(onPointerUp);
 		}
 
-		public void OnClick()
+		private void OnClick()
 		{
 			if (!onClick.isAnimating)
 				StartTransition(onClick);

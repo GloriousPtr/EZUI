@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI.Animation
 {
 	public enum MoveDirection
@@ -25,9 +27,9 @@ namespace EZUI.Animation
 		CustomPosition
 	}
 	
-	public static class MoveDirectionExtension
+	internal static class MoveDirectionExtension
 	{
-		public static Vector2 GetAnchoredPosition(this MoveDirection moveDirection, RectTransform rectTransform)
+		internal static Vector2 GetAnchoredPosition(this MoveDirection moveDirection, RectTransform rectTransform)
 		{
 			Vector2 position = new Vector2();
 

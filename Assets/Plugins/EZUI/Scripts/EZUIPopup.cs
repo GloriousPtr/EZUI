@@ -1,6 +1,8 @@
 ﻿using EZUI.Animation;
 using UnityEngine;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI
 {
 	public class EZUIPopup : EZUIBase

@@ -2,7 +2,9 @@
 using DG.Tweening;
 using EZUI.Animation;
 using UnityEngine;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI
 {
 	[RequireComponent(typeof(RectTransform))]

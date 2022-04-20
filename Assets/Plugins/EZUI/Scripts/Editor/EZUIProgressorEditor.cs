@@ -5,7 +5,7 @@ using UnityEngine;
 namespace EZUI_Editor
 {
 	[CustomEditor(typeof(EZUIProgressor))]
-	public class EZUIProgressorEditor : Editor
+	internal class EZUIProgressorEditor : Editor
 	{
 		private SerializedProperty _minValue;
 		private SerializedProperty _maxValue;

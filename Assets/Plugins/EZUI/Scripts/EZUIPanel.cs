@@ -2,7 +2,9 @@
 using UnityEngine;
 using EZUI.Animation;
 using DG.Tweening;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI
 {
 	public class EZUIPanel : EZUIBase
@@ -11,8 +13,8 @@ namespace EZUI
 		[SerializeField] private AnimationData showData = new AnimationData(State.In, Mode.None);
 		[SerializeField] private AnimationData hideData = new AnimationData(State.Out, Mode.None);
 		
-		public bool useCustomStartPosition = true;
-		public Vector3 customStartPosition;
+		[SerializeField] private bool useCustomStartPosition = true;
+		[SerializeField] private Vector3 customStartPosition;
 		
 		internal static int RunningAnimations { get; private set; }
 

@@ -2,7 +2,7 @@
 
 namespace EZUI_Editor
 {
-	public static class EZUISkin
+	internal static class EZUISkin
 	{
 		private static GUISkin _skin;
 
@@ -14,7 +14,7 @@ namespace EZUI_Editor
 		private static GUIStyle _tabButtonDefault;
 		private static GUIStyle _tabButtonSelected;
 		
-		public static GUISkin Skin
+		private static GUISkin Skin
 		{
 			get
 			{
@@ -29,7 +29,7 @@ namespace EZUI_Editor
 			}
 		}
 		
-		public static GUIStyle Box
+		internal static GUIStyle Box
 		{
 			get
 			{
@@ -41,7 +41,7 @@ namespace EZUI_Editor
 			}
 		}
 		
-		public static GUIStyle LargeButtonSelected
+		internal static GUIStyle LargeButtonSelected
 		{
 			get
 			{
@@ -53,7 +53,7 @@ namespace EZUI_Editor
 			}
 		}
 		
-		public static GUIStyle LargeButtonDefault
+		internal static GUIStyle LargeButtonDefault
 		{
 			get
 			{
@@ -65,7 +65,7 @@ namespace EZUI_Editor
 			}
 		}
 		
-		public static GUIStyle MediumButtonDefault
+		internal static GUIStyle MediumButtonDefault
 		{
 			get
 			{
@@ -77,7 +77,7 @@ namespace EZUI_Editor
 			}
 		}
 		
-		public static GUIStyle FoldoutButton
+		internal static GUIStyle FoldoutButton
 		{
 			get
 			{
@@ -89,7 +89,7 @@ namespace EZUI_Editor
 			}
 		}
 		
-		public static GUIStyle TabButtonDefault
+		internal static GUIStyle TabButtonDefault
 		{
 			get
 			{
@@ -101,7 +101,7 @@ namespace EZUI_Editor
 			}
 		}
 		
-		public static GUIStyle TabButtonSelected
+		internal static GUIStyle TabButtonSelected
 		{
 			get
 			{

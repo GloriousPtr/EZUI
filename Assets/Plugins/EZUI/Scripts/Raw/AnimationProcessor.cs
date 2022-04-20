@@ -1,13 +1,15 @@
 ﻿using DG.Tweening;
 using UnityEngine;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo(EZUI.StaticData.EZUI_EditorAssemblyName)]
 namespace EZUI.Animation
 {
-	public static class AnimationProcessor
+	internal static class AnimationProcessor
 	{
 		#region Move
 		
-		public static Sequence ProcessMove(this RectTransform rectTransform, MoveData moveData, bool immediate = false)
+		internal static Sequence ProcessMove(this RectTransform rectTransform, MoveData moveData, bool immediate = false)
 		{
 			if (moveData.moveMode == MoveMode.Anchored)
 				return rectTransform.ProcessRelativeMove(moveData, immediate);
@@ -79,7 +81,7 @@ namespace EZUI.Animation
 
 		#region RelativeMove
 		
-		public static Sequence ProcessRelativeMove(this RectTransform rectTransform, MoveData moveData, bool immediate)
+		private static Sequence ProcessRelativeMove(this RectTransform rectTransform, MoveData moveData, bool immediate)
 		{
 			Sequence sequence = DOTween.Sequence();
 			if (!immediate)
@@ -153,7 +155,7 @@ namespace EZUI.Animation
 
 		#region Rotate
 
-		public static Sequence ProcessRotation(this Transform transform, RotationData rotationData, bool immediate = false)
+		internal static Sequence ProcessRotation(this Transform transform, RotationData rotationData, bool immediate = false)
 		{
 			Sequence sequence = DOTween.Sequence();
 			if (!immediate)
@@ -221,7 +223,7 @@ namespace EZUI.Animation
 
 		#region Scale
 		
-		public static Sequence ProcessScale(this Transform transform, ScaleData scaleData, bool immediate = false)
+		internal static Sequence ProcessScale(this Transform transform, ScaleData scaleData, bool immediate = false)
 		{
 			Sequence sequence = DOTween.Sequence();
 
@@ -291,7 +293,7 @@ namespace EZUI.Animation
 
 		#region Fade
 		
-		public static Sequence ProcessFade(this CanvasGroup canvasGroup, FloatData floatData, bool immediate = false)
+		internal static Sequence ProcessFade(this CanvasGroup canvasGroup, FloatData floatData, bool immediate = false)
 		{
 			Sequence sequence = DOTween.Sequence();
 			if (!immediate)
