@@ -11,7 +11,8 @@ jobs:
       matrix:
         targetPlatform:
           - StandaloneWindows64
-          
+          - Android
+          - iOS
     steps:
       - uses: actions/checkout@v2
         with:
