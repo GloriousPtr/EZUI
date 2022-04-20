@@ -6,8 +6,10 @@ namespace EZUI
 {
 	public abstract class EZUIProgressorTarget : MonoBehaviour
 	{
-		internal abstract void SetValue(EZUIProgressor progressor);
-
-		public abstract void SetPercent(float percent);
+		/// <summary>
+		/// Called when EZUIProgressor notifies this object with change
+		/// </summary>
+		/// <param name="progressor">source progressor</param>
+		internal abstract void ShouldChange(EZUIProgressor progressor);
 	}
 }

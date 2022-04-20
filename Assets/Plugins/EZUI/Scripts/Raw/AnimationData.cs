@@ -165,7 +165,7 @@ namespace EZUI.Animation
 		[SerializeField] internal bool isAnyAnimationActive;
 #endif
 		
-		public AnimationData(State state, Mode mode)
+		internal AnimationData(State state, Mode mode)
 		{
 			defaultState = state;
 

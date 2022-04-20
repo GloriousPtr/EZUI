@@ -30,31 +30,82 @@ namespace EZUI
 			Selection.activeGameObject = obj;
 		}
 #endif
-
-		[SerializeField] private EZUIProgressorTarget[] progressorTargets;
 		
-		[SerializeField] private float minValue = 0.0f;
-		[SerializeField] private float maxValue = 1.0f;
+		public float minValue = 0.0f;
+		public float maxValue = 1.0f;
 		[SerializeField] private float currentValue = 0.5f;
 		[SerializeField] private float currentPercent = 0.5f;
-
-		[SerializeField] private float duration = 0.5f;
-		[SerializeField] private Ease ease = Ease.OutBack;
-		[SerializeField] private bool useWholeNumbers = true;
+		public float duration = 0.5f;
+		public Ease ease = Ease.OutBack;
+		public bool useWholeNumbers = true;
 		
-		[SerializeField] internal UnityEvent<float> OnPercentChanged;
-		[SerializeField] internal UnityEvent<float> OnValueChanged;
+		[SerializeField] private EZUIProgressorTarget[] progressorTargets;
+		
+		public UnityEvent<float> OnPercentChanged;
+		public UnityEvent<float> OnValueChanged;
 
 		private Tweener _tween;
 		private Sequence _sequence;
 		private bool _animating = true;
 		private int _instanceId;
 		
-		public int CurrentProgress => (int) Math.Round(100 * currentPercent);
-		public float CurrentValue => Mathf.Clamp((float) Math.Round(currentValue, useWholeNumbers ? 0 : 2), minValue, maxValue);
-
-		public float CurrentPercent => currentPercent;
-
+		/// <summary>
+		/// Percent: [0.0f, 1.0f]
+		/// </summary>
+		public float GetCurrentPercent() => currentPercent;
+		
+		/// <summary>
+		/// Value: [minValue, maxValue]
+		/// </summary>
+		public float GetCurrentValue() => Mathf.Clamp((float) Math.Round(currentValue, useWholeNumbers ? 0 : 2), minValue, maxValue);
+		
+		/// <summary>
+		/// Percent: [0, 100]
+		/// </summary>
+		public int GetCurrentProgress() => (int) Math.Round(100 * currentPercent);
+		
+		/// <summary>
+		/// Updates the Progressor Targets accordingly
+		/// </summary>
+		/// <param name="percent">Percent [0.0f, 1.0f]</param>
+		public void SetPercent(float percent)
+		{
+			percent = Mathf.Clamp01(percent);
+			EaseValue(Mathf.Lerp(minValue, maxValue, percent));
+		}
+		
+		/// <summary>
+		/// Updates the Progressor Targets accordingly without animating
+		/// </summary>
+		/// <param name="percent">Percent [0.0f, 1.0f]</param>
+		public void SetForcePercent(float percent)
+		{
+			percent = Mathf.Clamp01(percent);
+			OnPercentChanged?.Invoke(percent);
+			UpdateTargets(Mathf.Lerp(minValue, maxValue, percent));
+		}
+		
+		/// <summary>
+		/// Updates the Progressor Targets accordingly
+		/// </summary>
+		/// <param name="value">Value [minValue, maxValue]</param>
+		public void SetValue(float value)
+		{
+			value = Mathf.Clamp(value, minValue, maxValue);
+			EaseValue(value);
+		}
+		
+		/// <summary>
+		/// Updates the Progressor Targets accordingly without animating
+		/// </summary>
+		/// <param name="value">Value [minValue, maxValue]</param>
+		public void SetForceValue(float value)
+		{
+			value = Mathf.Clamp(value, minValue, maxValue);
+			OnValueChanged?.Invoke(value);
+			UpdateTargets(value);
+		}
+		
 		private void Awake()
 		{
 			_instanceId = GetInstanceID();
@@ -70,32 +121,11 @@ namespace EZUI
 			KillSequence();
 		}
 
-		internal void SetForcePercent(float percent)
-		{
-			percent = Mathf.Clamp01(percent);
-			OnPercentChanged?.Invoke(percent);
-			UpdateTargets(Mathf.Lerp(minValue, maxValue, percent));
-		}
-		
-		internal void SetForceValue(float value)
-		{
-			value = Mathf.Clamp(value, minValue, maxValue);
-			OnValueChanged?.Invoke(value);
-			UpdateTargets(value);
-		}
-
-		public void SetPercent(float percent)
-		{
-			percent = Mathf.Clamp01(percent);
-			EaseValue(Mathf.Lerp(minValue, maxValue, percent));
-		}
-		
-		public void SetValue(float value)
-		{
-			value = Mathf.Clamp(value, minValue, maxValue);
-			EaseValue(value);
-		}
-		
+		/// <summary>
+		/// Animates the value
+		/// </summary>
+		/// <param name="value"></param>
+		/// <returns></returns>
 		internal Sequence EaseValue(float value)
 		{
 			if (_animating && _sequence != null)
@@ -124,6 +154,10 @@ namespace EZUI
 			return _sequence;
 		}
 
+		/// <summary>
+		/// Updates all the targets
+		/// </summary>
+		/// <param name="value"></param>
 		private void UpdateTargets(float value)
 		{
 			currentValue = value;
@@ -134,13 +168,16 @@ namespace EZUI
 			
 			foreach (EZUIProgressorTarget target in progressorTargets)
 			{
-				target.SetValue(this);
+				target.ShouldChange(this);
 #if UNITY_EDITOR
 				EditorUtility.SetDirty(target);
 #endif
 			}
 		}
 
+		/// <summary>
+		/// Kills the DOTween sequence
+		/// </summary>
 		private void KillSequence()
 		{
 			DOTween.Kill(_instanceId);

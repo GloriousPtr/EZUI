@@ -9,7 +9,7 @@ namespace EZUI
 	{
 		[SerializeField] private EZUIProgressor[] progressors;
 
-		[SerializeField] private UnityEvent<float> OnProgressChanged;
+		public UnityEvent<float> OnProgressChanged;
 
 		private void OnEnable()
 		{
@@ -30,7 +30,7 @@ namespace EZUI
 			float sum = 0;
 
 			for (int i = 0; i < progressors.Length; i++)
-				sum += progressors[i].CurrentPercent;
+				sum += progressors[i].GetCurrentPercent();
 
 			sum /= progressors.Length;
 			OnProgressChanged?.Invoke(sum);

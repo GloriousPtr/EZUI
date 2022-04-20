@@ -19,16 +19,31 @@ namespace EZUI
 		}
 #endif
 
-		internal override void SetValue(EZUIProgressor progressor)
+		internal override void ShouldChange(EZUIProgressor progressor)
 		{
 			if (mask)
-				mask.fillAmount = progressor.CurrentPercent;
+				mask.fillAmount = progressor.GetCurrentPercent();
 		}
 
-		public override void SetPercent(float percent)
+		/// <summary>
+		/// Sets the Bar Fill
+		/// </summary>
+		/// <param name="percent">Percent [0.0f, 1.0f]</param>
+		public void SetPercent(float percent)
 		{
 			if (mask)
 				mask.fillAmount = percent;
+		}
+
+		/// <summary>
+		/// Sets the color of Progress Bar Fill
+		/// </summary>
+		/// <param name="fillColor">Color value</param>
+		public void SetColor(Color fillColor)
+		{
+			color = fillColor;
+			if (fill)
+				fill.color = fillColor;
 		}
 	}
 }

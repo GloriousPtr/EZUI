@@ -49,7 +49,7 @@ namespace EZUI_Editor
 				};
 				
 				EditorUtils.DrawField(serializedObject, 60, "minValue");
-				EditorGUILayout.LabelField($"{progressor.CurrentValue} ({progressor.CurrentProgress} %)", style);
+				EditorGUILayout.LabelField($"{progressor.GetCurrentValue()} ({progressor.GetCurrentProgress()} %)", style);
 				EditorUtils.DrawField(serializedObject, 60, "maxValue");
 			}
 			EditorGUILayout.EndHorizontal();

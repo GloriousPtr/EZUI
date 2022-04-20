@@ -89,7 +89,7 @@ namespace EZUI_Editor
 			
 			_previewing = true;
 			
-			float originalValue = progressor.CurrentValue;
+			float originalValue = progressor.GetCurrentValue();
 			progressor.SetForcePercent(0.0f);
 			
 			Sequence previewSequence = DOTween.Sequence();

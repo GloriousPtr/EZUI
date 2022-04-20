@@ -8,22 +8,42 @@ namespace EZUI
 {
 	public class EZUIManager : MonoBehaviour
 	{
+		/// <summary>
+		/// Singleton Instance for EZUIManager
+		/// </summary>
 		public static EZUIManager Instance { get; private set; }
 		
 		[SerializeField] private bool debug;
 		[SerializeField] private List<Transform> UImodules = new List<Transform>();
 		
-		private List<EZUIPanel> panels = new List<EZUIPanel>();
-		private List<EZUIPopup> popups = new List<EZUIPopup>();
-		private Dictionary<string, EZUIPopup> popupsDictionary = new Dictionary<string, EZUIPopup>();
+		private readonly List<EZUIPanel> panels = new List<EZUIPanel>();
+		private readonly List<EZUIPopup> popups = new List<EZUIPopup>();
+		private readonly Dictionary<string, EZUIPopup> popupsDictionary = new Dictionary<string, EZUIPopup>();
 		private readonly Stack<EZUIPopup> popupStack = new Stack<EZUIPopup>();
 		private readonly Stack<EZUIData.Page> pageStack = new Stack<EZUIData.Page>();
 		
+		/// <summary>
+		/// Triggered when a Page is shown
+		/// </summary>
+		/// /// <param name="key">Page Key</param>
 		public event Action<string> OnShowPage;
+		
+		/// <summary>
+		/// Triggered when a Popup is shown
+		/// </summary>
+		/// <param name="key">Popup Key</param>
 		public event Action<string> OnShowPopup;
+		
+		/// <summary>
+		/// Triggers on back press when there is no
+		/// Popups and Panels left in the stack.
+		/// </summary>
 		public event Action ShouldQuit;
 		
-		public string CurrentPage { get; private set; }
+		/// <summary>
+		/// Currently active page key
+		/// </summary>
+		public string CurrentPageKey { get; private set; }
 		
 		internal static EZUIData Data
 		{
@@ -61,7 +81,7 @@ namespace EZUI
 			EZUIData.Page defaultPage = Data.GetDefaultPage();
 			if (defaultPage != null)
 			{
-				HideAll(true);
+				HideAllNoClearStack(true);
 				ShowPage(defaultPage, true);
 			}
 		}
@@ -72,6 +92,9 @@ namespace EZUI
 				GoBack();
 		}
 
+		/// <summary>
+		/// Initialize
+		/// </summary>
 		private void Init()
 		{
 			Data.Init();
@@ -95,11 +118,20 @@ namespace EZUI
 			}
 		}
 
+		/// <summary>
+		/// Shows the Page and add to stack
+		/// </summary>
+		/// <param name="key">Page key</param>
 		public void ShowPage(string key)
 		{
 			ShowPage(key, false);
 		}
 
+		/// <summary>
+		/// Shows the Page and add to stack
+		/// </summary>
+		/// <param name="key">Page key</param>
+		/// <param name="immediate">true- no animations, false- with animations</param>
 		public void ShowPage(string key, bool immediate)
 		{
 			if (debug)
@@ -114,6 +146,13 @@ namespace EZUI
 			ShowPage(Data.pagesDictionary[key], immediate);
 		}
 		
+		/// <summary>
+		/// Shows the Page
+		/// </summary>
+		/// <param name="page">Page key</param>
+		/// <param name="immediate">true- no animations, false- with animations</param>
+		/// <param name="addToBackStack">FOR INTERNAL USE ONLY</param>
+		/// <returns>If the requested page is shown or not</returns>
 		private bool ShowPage(EZUIData.Page page, bool immediate, bool addToBackStack = true)
 		{
 			if (debug)
@@ -125,10 +164,10 @@ namespace EZUI
 				}
 			}
 			
-			if (EZUIPanel.RunningAnimations > 0 || CurrentPage == page.key)
+			if (EZUIPanel.RunningAnimations > 0 || CurrentPageKey == page.key)
 				return false;
 			
-			CurrentPage = page.key;
+			CurrentPageKey = page.key;
 
 			for (int i = 0; i < popups.Count; i++)
 				popups[i].SetVisible(false);
@@ -159,11 +198,20 @@ namespace EZUI
 			return true;
 		}
 
+		/// <summary>
+		/// Shows the Popup and add to stack
+		/// </summary>
+		/// <param name="key">Popup key</param>
 		public void ShowPopup(string key)
 		{
 			ShowPopup(key, false);
 		}
 		
+		/// <summary>
+		/// Shows the Popup and add to stack
+		/// </summary>
+		/// <param name="key">Popup key</param>
+		/// <param name="immediate">true- no animations, false- with animations</param>
 		public void ShowPopup(string key, bool immediate)
 		{
 			if (debug)
@@ -178,6 +226,11 @@ namespace EZUI
 			ShowPopup(popupsDictionary[key], immediate);
 		}
 		
+		/// <summary>
+		/// Shows the Popup and add to stack
+		/// </summary>
+		/// <param name="popup">Popup object</param>
+		/// <param name="immediate">true- no animations, false- with animations</param>
 		public void ShowPopup(EZUIPopup popup, bool immediate)
 		{
 			if (popup == null)
@@ -191,11 +244,20 @@ namespace EZUI
 				PrettyPrintStack();
 		}
 		
+		/// <summary>
+		/// Hides the Popup and remove from stack
+		/// </summary>
+		/// <param name="key">Popup key</param>
 		public void HidePopup(string key)
 		{
 			HidePopup(key, false);
 		}
 		
+		/// <summary>
+		/// Hides the Popup and remove from stack
+		/// </summary>
+		/// <param name="key">Popup key</param>
+		/// <param name="immediate">true- no animations, false- with animations</param>
 		public void HidePopup(string key, bool immediate)
 		{
 			if (debug)
@@ -210,6 +272,11 @@ namespace EZUI
 			HidePopup(popupsDictionary[key], immediate);
 		}
 		
+		/// <summary>
+		/// Hides the Popup and remove from stack
+		/// </summary>
+		/// <param name="popup">Popup object</param>
+		/// <param name="immediate">true- no animations, false- with animations</param>
 		public void HidePopup(EZUIPopup popup, bool immediate)
 		{
 			if (popup == null)
@@ -223,18 +290,23 @@ namespace EZUI
 				PrettyPrintStack();
 		}
 		
-		public void HideAll(bool immediate, bool clearBackStack)
+		/// <summary>
+		/// Hide All the Popups and Pages and clear the stack
+		/// </summary>
+		/// <param name="immediate">true- no animations, false- with animations</param>
+		public void HideAllAndClearStack(bool immediate)
 		{
-			if (clearBackStack)
-			{
-				popupStack.Clear();
-				pageStack.Clear();
-			}
-			
-			HideAll(immediate);
+			popupStack.Clear();
+			pageStack.Clear();
+			HideAllNoClearStack(immediate);
 		}
 		
-		private void HideAll(bool immediate)
+		/// <summary>
+		/// Hide All the Popups and Pages
+		/// This does not remove anything from stack
+		/// </summary>
+		/// <param name="immediate">true- no animations, false- with animations</param>
+		private void HideAllNoClearStack(bool immediate)
 		{
 			foreach (EZUIPanel panel in panels)
 				panel.SetVisible(false, immediate);
@@ -243,6 +315,10 @@ namespace EZUI
 				popup.SetVisible(false, immediate);
 		}
 
+		/// <summary>
+		/// Go back once, Precedence: Popup > Page
+		/// Also removes the current Popup/Page from stack
+		/// </summary>
 		public void GoBack()
 		{
 			if (popupStack.Count > 0)
@@ -263,6 +339,9 @@ namespace EZUI
 				pageStack.Push(poppedPage);
 		}
 
+		/// <summary>
+		/// Print the stack
+		/// </summary>
 		private void PrettyPrintStack()
 		{
 			if (!debug)
