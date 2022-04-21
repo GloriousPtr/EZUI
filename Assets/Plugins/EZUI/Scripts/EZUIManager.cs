@@ -14,6 +14,7 @@ namespace EZUI
 		public static EZUIManager Instance { get; private set; }
 		
 		[SerializeField] private bool debug;
+		[SerializeField] internal EZUIData data;
 		[SerializeField] private List<Transform> UImodules = new List<Transform>();
 		
 		private readonly List<EZUIPanel> panels = new List<EZUIPanel>();
@@ -45,23 +46,6 @@ namespace EZUI
 		/// </summary>
 		public string CurrentPageKey { get; private set; }
 		
-		internal static EZUIData Data
-		{
-			get
-			{
-				if (data != null)
-					return data;
-				
-				data = (EZUIData) Resources.Load("EZUI/Settings/EZUIData");
-				if (data == null)
-					Debug.LogError("EZUI data not found at: EZUI/Settings/EZUIData");
-				
-				return data;
-			}
-		}
-		
-		private static EZUIData data;
-		
 		private void Awake()
 		{
 			if (Instance != null)
@@ -78,7 +62,7 @@ namespace EZUI
 		{
 			Init();
 			
-			EZUIData.Page defaultPage = Data.GetDefaultPage();
+			EZUIData.Page defaultPage = data.GetDefaultPage();
 			if (defaultPage != null)
 			{
 				HideAllNoClearStack(true);
@@ -97,7 +81,7 @@ namespace EZUI
 		/// </summary>
 		private void Init()
 		{
-			Data.Init();
+			data.Init();
 			
 			panels.Clear();
 			panels.AddRange(GetComponentsInChildren<EZUIPanel>(true));
@@ -136,14 +120,14 @@ namespace EZUI
 		{
 			if (debug)
 			{
-				if (!Data.pagesDictionary.ContainsKey(key))
+				if (!data.pagesDictionary.ContainsKey(key))
 				{
 					Debug.LogError($"Page not found with key: {key}");
 					return;
 				}
 			}
 			
-			ShowPage(Data.pagesDictionary[key], immediate);
+			ShowPage(data.pagesDictionary[key], immediate);
 		}
 		
 		/// <summary>

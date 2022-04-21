@@ -43,7 +43,14 @@ namespace EZUI_Editor
 			hideData = serializedObject.FindProperty("hideData");
 
 			List<string> allPanels = new List<string>() {"-"};
-			allPanels.AddRange(EZUIManager.Data.panels);
+			
+			EZUIManager manager = EZUIManager.Instance;
+			if (!manager)
+				manager = FindObjectOfType<EZUIManager>();
+			
+			if (manager && manager.data)
+				allPanels.AddRange(manager.data.panels);
+			
 			allPanelKeys = allPanels.ToArray();
 			
 			panelIndex = Array.FindIndex(allPanelKeys, x => x == key.stringValue);

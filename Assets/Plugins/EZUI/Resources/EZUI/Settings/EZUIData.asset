@@ -33,11 +33,12 @@ MonoBehaviour:
     - Stats
     ignoringPanels: []
     defaultPage: 0
-  getDefaultPage:
-    key: 
-    showingPanels: []
+  defaultPage:
+    key: MenuGroup
+    showingPanels:
+    - Menu
     ignoringPanels: []
-    defaultPage: 0
+    defaultPage: 1
   panels:
   - Menu
   - Settings
