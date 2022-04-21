@@ -17,6 +17,15 @@ namespace EZUI_Editor
 				return;
 			
 			_previewing = true;
+
+			Transform transform = ezuiBase.transform;
+			
+			ezuiBase.gameObject.SetActive(true);
+			
+			Vector3 localPosition = transform.localPosition;
+			Vector3 localRotation = transform.localEulerAngles;
+			Vector3 localScale = transform.localScale;
+			float alpha = ezuiBase.GetComponent<CanvasGroup>().alpha;
 			
 			System.Type type = ezuiBase.GetType();
 			
@@ -32,15 +41,6 @@ namespace EZUI_Editor
 				}
 			}
 			initMethod.Invoke(ezuiBase, null);
-
-			Transform transform = ezuiBase.transform;
-			
-			ezuiBase.gameObject.SetActive(true);
-			
-			Vector3 localPosition = transform.localPosition;
-			Vector3 localRotation = transform.localEulerAngles;
-			Vector3 localScale = transform.localScale;
-			float alpha = ezuiBase.GetComponent<CanvasGroup>().alpha;
 			
 			// Call ezuiBase.StartTransition(animationData, false, null);
 			MethodInfo transitionMethod;

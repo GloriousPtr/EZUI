@@ -13,6 +13,9 @@ namespace EZUI
 		
 		internal void SetVisible(bool active, bool immediate = false)
 		{
+			if (active)
+				ResetState();
+			
 			if (active == gameObject.activeSelf)
 				return;
 			
@@ -44,6 +47,14 @@ namespace EZUI
 			showData.rotationData.initialValue = rectTransform.localEulerAngles;
 			showData.scaleData.initialValue = rectTransform.localScale;
 			showData.fadeData.initialValue = canvasGroup.alpha;
+		}
+
+		private void ResetState()
+		{
+			rectTransform.localPosition = StaticData.ZeroVector;
+			rectTransform.localRotation = Quaternion.identity;
+			rectTransform.localScale = StaticData.UnitVector;
+			canvasGroup.alpha = 1.0f;
 		}
 	}
 }

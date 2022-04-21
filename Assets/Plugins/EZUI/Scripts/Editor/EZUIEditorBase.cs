@@ -196,8 +196,6 @@ namespace EZUI_Editor
 			GUI.backgroundColor = GetColor(boxColor);
 			EditorGUILayout.BeginVertical("Box");
 			{
-				EditorUtils.DrawField(moveData, 0, "moveMode");
-				
 				EditorUtils.BeginDrawFieldsHorizontal(moveData, false, 70, "startDelay", "duration");
 				{
 					if (defaultState != State.None)
@@ -219,6 +217,7 @@ namespace EZUI_Editor
 				switch ((State) stateProperty.intValue)
 				{
 					case State.None:
+						EditorUtils.DrawField(moveData, 0, "moveMode");
 						switch ((Mode) modeProperty.intValue)
 						{
 							case Mode.None:

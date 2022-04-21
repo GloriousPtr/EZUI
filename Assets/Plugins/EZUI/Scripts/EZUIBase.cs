@@ -27,6 +27,7 @@ namespace EZUI
 			rectTransform = GetComponent<RectTransform>();
 			canvasGroup = GetComponent<CanvasGroup>();
 			
+			SetCustomPosition();
 			SetInitialState();
 		}
 		

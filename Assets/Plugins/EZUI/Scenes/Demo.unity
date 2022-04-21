@@ -3577,7 +3577,7 @@ MonoBehaviour:
     isAnyAnimationActive: 1
   hideData:
     defaultState: 2
-    move: 1
+    move: 0
     rotation: 0
     scale: 0
     fade: 1
@@ -5263,7 +5263,7 @@ MonoBehaviour:
     isAnyAnimationActive: 1
   hideData:
     defaultState: 2
-    move: 1
+    move: 0
     rotation: 0
     scale: 0
     fade: 1
@@ -5363,7 +5363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -3012, y: 85}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1132326819
@@ -6308,7 +6308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 550}
+  m_AnchoredPosition: {x: 0, y: 550.8}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1462970866
@@ -6477,7 +6477,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     isAnimating: 0
-    expanded: 1
+    expanded: 0
     isAnyAnimationActive: 1
   onPointerExit:
     defaultState: 0
@@ -6539,7 +6539,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     isAnimating: 0
-    expanded: 1
+    expanded: 0
     isAnyAnimationActive: 1
   onPointerDown:
     defaultState: 0
@@ -6549,7 +6549,7 @@ MonoBehaviour:
     fade: 0
     moveData:
       state: 0
-      mode: 1
+      mode: 0
       moveMode: 0
       startDelay: 0
       duration: 1
@@ -6557,7 +6557,7 @@ MonoBehaviour:
       initialValue: {x: 0, y: 0, z: 0}
       from: {x: 0, y: 0, z: 0}
       to: {x: 0, y: 0, z: 0}
-      by: {x: 100, y: 0, z: 0}
+      by: {x: 0, y: 50, z: 0}
       elasticity: 1
       vibrato: 12
       ease: 1
@@ -6725,7 +6725,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     isAnimating: 0
-    expanded: 1
+    expanded: 0
     isAnyAnimationActive: 1
   displayText: Settings
   button: {fileID: 1462970866}
@@ -9656,7 +9656,7 @@ MonoBehaviour:
     isAnyAnimationActive: 1
   hideData:
     defaultState: 2
-    move: 1
+    move: 0
     rotation: 0
     scale: 0
     fade: 1
@@ -10701,7 +10701,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2398, y: -2383}
+  m_AnchoredPosition: {x: 3081, y: -2226}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5632294919697160951
@@ -10808,7 +10808,7 @@ MonoBehaviour:
     isAnyAnimationActive: 1
   hideData:
     defaultState: 2
-    move: 1
+    move: 0
     rotation: 0
     scale: 0
     fade: 1
