@@ -209,7 +209,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441887928}
+      - m_Target: {fileID: 607247707}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
         m_MethodName: GoBack
         m_Mode: 1
@@ -2438,6 +2438,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588458356}
   m_CullTransparentMesh: 1
+--- !u!1 &607247706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 607247708}
+  - component: {fileID: 607247707}
+  m_Layer: 0
+  m_Name: EZUIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &607247707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607247706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35da88ff551ad894e88a0c1012b4fdff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  data: {fileID: 11400000, guid: b0d2613a2e6563e46af62adeb8990e03, type: 2}
+  UImodules:
+  - {fileID: 1441887932}
+  - {fileID: 332927124}
+--- !u!4 &607247708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607247706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1723485, y: -2.5819116, z: 3.7119484}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &616754592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2937,7 +2986,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441887928}
+      - m_Target: {fileID: 607247707}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
         m_MethodName: ShowPage
         m_Mode: 5
@@ -3073,7 +3122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441887928}
+      - m_Target: {fileID: 607247707}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
         m_MethodName: ShowPopup
         m_Mode: 5
@@ -4158,7 +4207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441887928}
+      - m_Target: {fileID: 607247707}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
         m_MethodName: GoBack
         m_Mode: 1
@@ -5359,7 +5408,7 @@ RectTransform:
   m_Children:
   - {fileID: 163719133}
   m_Father: {fileID: 1441887932}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6160,7 +6209,6 @@ GameObject:
   - component: {fileID: 1441887931}
   - component: {fileID: 1441887930}
   - component: {fileID: 1441887929}
-  - component: {fileID: 1441887928}
   m_Layer: 5
   m_Name: PanelCanvas
   m_TagString: Untagged
@@ -6168,22 +6216,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1441887928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441887927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35da88ff551ad894e88a0c1012b4fdff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
-  data: {fileID: 11400000, guid: b0d2613a2e6563e46af62adeb8990e03, type: 2}
-  UImodules:
-  - {fileID: 332927124}
 --- !u!114 &1441887929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6257,12 +6289,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2118101282}
   - {fileID: 1104736540}
+  - {fileID: 2118101282}
   - {fileID: 5632294919697160950}
   - {fileID: 688421786}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6355,7 +6387,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441887928}
+      - m_Target: {fileID: 607247707}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
         m_MethodName: ShowPage
         m_Mode: 5
@@ -7140,7 +7172,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1694928101
 GameObject:
@@ -8301,7 +8333,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441887928}
+      - m_Target: {fileID: 607247707}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
         m_MethodName: ShowPage
         m_Mode: 5
@@ -9307,7 +9339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441887928}
+      - m_Target: {fileID: 607247707}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
         m_MethodName: GoBack
         m_Mode: 1
@@ -9752,7 +9784,7 @@ RectTransform:
   m_Children:
   - {fileID: 946732801}
   m_Father: {fileID: 1441887932}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10107,7 +10139,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441887928}
+      - m_Target: {fileID: 607247707}
         m_TargetAssemblyTypeName: EZUI.EZUIManager, EZUI
         m_MethodName: GoBack
         m_Mode: 1

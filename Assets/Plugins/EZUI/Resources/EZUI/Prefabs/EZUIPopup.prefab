@@ -1,0 +1,275 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4312209883312282181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3628082089871873763}
+  - component: {fileID: 5550392343806876794}
+  - component: {fileID: 1027974197498373171}
+  m_Layer: 5
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3628082089871873763
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312209883312282181}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3339761724084989057}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 600, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5550392343806876794
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312209883312282181}
+  m_CullTransparentMesh: 0
+--- !u!114 &1027974197498373171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312209883312282181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.15686274, g: 0.5928205, b: 0.7372549, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4547087664916394348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3339761724084989057}
+  - component: {fileID: 3853028405979598521}
+  - component: {fileID: 2370367152224399588}
+  - component: {fileID: 5744855972167731673}
+  m_Layer: 5
+  m_Name: EZUIPopup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3339761724084989057
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4547087664916394348}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3628082089871873763}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3853028405979598521
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4547087664916394348}
+  m_CullTransparentMesh: 0
+--- !u!225 &2370367152224399588
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4547087664916394348}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &5744855972167731673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4547087664916394348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43ba60dd3a343b7aa129a8ac6c9bb7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Popup
+  showData:
+    defaultState: 1
+    move: 0
+    rotation: 0
+    scale: 1
+    fade: 1
+    moveData:
+      state: 1
+      mode: 0
+      moveMode: 0
+      startDelay: 0
+      duration: 1
+      moveDirection: 0
+      initialValue: {x: 2807, y: 2679, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 100, y: 0, z: 0}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+    rotationData:
+      state: 1
+      mode: 0
+      startDelay: 0
+      duration: 1
+      initialValue: {x: -0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0, y: 0, z: 45}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+      rotateMode: 1
+    scaleData:
+      state: 1
+      mode: 0
+      startDelay: 0
+      duration: 0.3
+      initialValue: {x: 1, y: 1, z: 1}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0.1, y: 0.1, z: 0.1}
+      elasticity: 1
+      vibrato: 12
+      ease: 27
+    fadeData:
+      state: 1
+      startDelay: 0
+      duration: 1
+      initialValue: 1
+      from: 0
+      to: 0
+      ease: 27
+    onStarted:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    isAnimating: 0
+    expanded: 1
+    isAnyAnimationActive: 1
+  hideData:
+    defaultState: 2
+    move: 0
+    rotation: 0
+    scale: 1
+    fade: 1
+    moveData:
+      state: 2
+      mode: 0
+      moveMode: 0
+      startDelay: 0
+      duration: 1
+      moveDirection: 0
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 100, y: 0, z: 0}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+    rotationData:
+      state: 2
+      mode: 0
+      startDelay: 0
+      duration: 1
+      initialValue: {x: 0, y: 0, z: 0}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0, y: 0, z: 45}
+      elasticity: 1
+      vibrato: 12
+      ease: 1
+      rotateMode: 1
+    scaleData:
+      state: 2
+      mode: 0
+      startDelay: 0
+      duration: 0.3
+      initialValue: {x: 1, y: 1, z: 1}
+      from: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 0, z: 0}
+      by: {x: 0.1, y: 0.1, z: 0.1}
+      elasticity: 1
+      vibrato: 12
+      ease: 27
+    fadeData:
+      state: 2
+      startDelay: 0
+      duration: 0.3
+      initialValue: 1
+      from: 0
+      to: 0
+      ease: 27
+    onStarted:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    isAnimating: 0
+    expanded: 1
+    isAnyAnimationActive: 1

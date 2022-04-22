@@ -14,21 +14,7 @@ namespace EZUI
 	public class EZUIProgressor : MonoBehaviour
 	{
 #if UNITY_EDITOR
-		[MenuItem("GameObject/EZUI/Linear Progress Bar", false, 1)]
-		public static void AddLinearProgressBar(MenuCommand menuCommand)
-		{
-			GameObject obj = Instantiate(Resources.Load<GameObject>("EZUI/Prefabs/LinearProgressBar"),
-				Selection.activeTransform.transform, false);
-			Selection.activeGameObject = obj;
-		}
-		
-		[MenuItem("GameObject/EZUI/Radial Progress Bar", false, 1)]
-		public static void AddRadialProgressBar(MenuCommand menuCommand)
-		{
-			GameObject obj = Instantiate(Resources.Load<GameObject>("EZUI/Prefabs/RadialProgressBar"),
-				Selection.activeTransform.transform, false);
-			Selection.activeGameObject = obj;
-		}
+
 #endif
 		
 		public float minValue = 0.0f;
