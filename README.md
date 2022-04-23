@@ -7,6 +7,8 @@
 ![GitHub](https://img.shields.io/github/license/MohitSethi99/EZUI?color=blue&style=flat-square)
 ![Size](https://img.shields.io/github/repo-size/MohitSethi99/EZUI?style=flat-square)
 
+![Sample](https://github.com/MohitSethi99/EZUI/blob/main/.github/Sample.gif)
+
 Unity Animation system is not meant to work with UI.
 The problem here is if one panel is updated every child and subsequent children in the tree which must be UI element (quad) are marked dirty. This leads to poor performance because of the resubmission each frame CPU has to do and Unity Animation system does this even when animations are not running.
 
